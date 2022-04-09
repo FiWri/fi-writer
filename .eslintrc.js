@@ -1,4 +1,5 @@
-{
+// eslint-disable-next-line no-undef
+module.exports = {
     "env": {
         "browser": true,
         "es2021": true
@@ -8,6 +9,7 @@
         "plugin:react/recommended",
         "plugin:@typescript-eslint/recommended",
         "plugin:react/jsx-runtime",
+        "plugin:storybook/recommended",
         "prettier"
     ],
     "parser": "@typescript-eslint/parser",
