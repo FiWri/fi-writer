@@ -4,29 +4,22 @@
   "version": "0.0.0",
   "scripts": {
     "build": "tsc && vite build",
-    "build-storybook": "build-storybook",
     "dev": "vite",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
     "preview": "vite preview",
     "serve": "vite preview",
-    "serve-https": "serve dist",
-    "storybook": "start-storybook -p 6006"
+    "serve-https": "serve dist"
   },
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "styled-react-modal": "^3.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
-    "@storybook/addon-actions": "^6.5.0-alpha.60",
-    "@storybook/addon-essentials": "^6.5.0-alpha.60",
-    "@storybook/addon-interactions": "^6.5.0-alpha.60",
-    "@storybook/addon-links": "^6.5.0-alpha.60",
-    "@storybook/builder-vite": "^0.1.26",
-    "@storybook/react": "^6.5.0-alpha.60",
-    "@storybook/testing-library": "^0.0.9",
+    "@babel/preset-typescript": "^7.16.7",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@types/styled-components": "^5.1.25",
@@ -34,16 +27,16 @@
     "@typescript-eslint/parser": "^5.18.0",
     "@vitejs/plugin-react": "^1.0.7",
     "babel-loader": "^8.2.4",
+    "babel-plugin-styled-components": "^2.0.7",
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
-    "eslint-plugin-storybook": "^0.5.8",
     "https-localhost": "^4.7.1",
     "jest": "^27.5.1",
+    "jest-styled-components": "^7.0.8",
     "prettier": "^2.6.2",
     "sass": "^1.50.0",
-    "storybook-builder-vite": "^0.1.23",
     "typescript": "^4.5.4",
     "vite": "^2.9.0",
     "vite-plugin-pwa": "^0.11.13"
