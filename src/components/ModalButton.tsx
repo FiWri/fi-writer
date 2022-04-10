@@ -1,21 +1,29 @@
+/** @jsxImportSource theme-ui */
+
 import { useState } from "react";
 import Modal from "styled-react-modal";
-import { Theme } from "../themes";
-import { Button } from "./Button";
+import { Button, Theme, useThemeUI } from "theme-ui";
 
 const StyledModal = Modal.styled`
-  width: 20rem;
-  height: 20rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: ${({ theme }: { theme: Theme }) => theme.colors.text};
-  background-color: ${({ theme }: { theme: Theme }) => theme.colors.primary};
+      align-items: center;
+      background-color: ${({ theme }: { theme: Theme }) => theme.colors?.background};
+      border: solid ${({ theme }: { theme: Theme }) => theme.colors?.muted};
+      border-radius: 3em;
+      box-sizing: content-box; // flex doesn't seem to take padding into account when calculating size for border-box
+      color: ${({ theme }: { theme: Theme }) => theme.colors?.text};
+      display: flex;
+      height: 20em;
+      justify-content: center;
+      flex: 1 1 auto;
+      flex-direction: column;
+      max-width: 80vw;
+      padding: 0.25em 0.5em;
+      width: 20em;
 `;
 
 export const ModalButton = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { theme } = useThemeUI();
 
   function toggleModal() {
     setIsOpen(!isOpen);
@@ -24,8 +32,9 @@ export const ModalButton = () => {
   return (
     <div>
       <Button onClick={toggleModal}>Click me</Button>
-      <StyledModal isOpen={isOpen} onBackgroundClick={toggleModal} onEscapeKeydown={toggleModal}>
-        <span>I am a modal!</span>
+      <StyledModal theme={theme} isOpen={isOpen} onBackgroundClick={toggleModal} onEscapeKeydown={toggleModal}>
+        <p>I am a modal!</p>
+        <p>{JSON.stringify(theme, null, 2)}</p>
         <Button onClick={toggleModal}>Close me</Button>
       </StyledModal>
     </div>

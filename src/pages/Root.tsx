@@ -1,29 +1,32 @@
 import { useState } from "react";
-import { Button } from "../components/Button";
+import { Button, useColorMode } from "theme-ui";
 import { ModalButton } from "../components/ModalButton";
-import "./Root.scss";
 import logo from "./logo.svg";
+import "./Root.scss";
 import { RootHeader } from "./RootHeader";
 
-interface RootProps extends React.HTMLProps<HTMLDivElement> {
-  toggleTheme: () => void;
-}
-export const Root = ({ toggleTheme }: RootProps) => {
+export const Root = () => {
+  const [colorMode, setColorMode] = useColorMode();
+
+  const toggleColorMode = () => {
+    setColorMode(colorMode === "light" ? "dark" : "light");
+  };
+
   const [count, setCount] = useState(0);
   return (
     <div className="Root">
       <RootHeader>
         <img src={logo} className="Root-logo" alt="logo" />
         <p>Hello Vite + React!</p>
-        <p>
+        <div>
           <Button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
           </Button>
-          <Button type="button" onClick={() => toggleTheme()}>
+          <Button variant="secondary" type="button" onClick={() => toggleColorMode()}>
             toggle theme
           </Button>
           <ModalButton />
-        </p>
+        </div>
         <p>
           Edit <code>Root.tsx</code> and save to test HMR updates.
         </p>

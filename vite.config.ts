@@ -5,25 +5,7 @@ import { VitePWA } from "vite-plugin-pwa";
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    // For all styled components:
-    // create classnames from fileName and displayName in development
-    react({
-      babel: {
-        presets: ["@babel/preset-typescript"],
-        plugins: [
-          "@babel/plugin-transform-typescript",
-          [
-            "babel-plugin-styled-components",
-            {
-              ssr: false,
-              pure: true,
-              displayName: true,
-              fileName: false,
-            },
-          ],
-        ],
-      },
-    }),
+    react(),
     // Declare icons for the PWA
     VitePWA({
       includeAssets: ["favicon.svg", "favicon.ico", "robots.txt", "apple-touch-icon.png"],
