@@ -17,6 +17,37 @@ Fi-Writer is an interactive fiction writer made as a [Progressive Web Applicatio
 * Publish a story
   * [ ] Export a story in Twine-compatible HTML/JS format
   * [ ] Publish to itch.io using [butler](https://itch.io/docs/butler/)
+  
+## Architecture
+
+### main.tsx
+
+This is the website renderer. It simply renders the `App` component and wraps it into the DOM router.
+
+### App.tsx
+
+This is the main app router. It describes the application routes, links them to their respective views, and wraps them in global contexts.
+Contexts are:
+
+* `ThemeProvider`: provides the application theme through [Theme UI](https://theme-ui.com/)
+* `ModalProvider`: provides a global application modal component through [styled-react-modal](https://github.com/AlexanderRichey/styled-react-modal)
+* `Routes`: describes the application routes and links them to their respective views
+
+### components
+
+### themes
+
+All theme's elements are described here:
+
+* `colors`: defines all colors for all modes, such as `light`/`dark`/etc.
+* `fonts`: defines fonts family used in the application
+* `theme`: provides the application theme to the `ThemeProvider` context
+* `styles`: defines base html elements' styles, such as `root`, `h1`, etc.
+* `buttons`, ...: defines basic components' styles and variants through the global theme
+
+### views
+
+This is the views folder. It describe the main application views (or pages). These views are mostly organising the layouts for components.
 
 ## Contributing
 

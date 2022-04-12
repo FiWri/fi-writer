@@ -34,7 +34,13 @@ export const ModalButton = () => {
       <Button onClick={toggleModal}>Click me</Button>
       <StyledModal theme={theme} isOpen={isOpen} onBackgroundClick={toggleModal} onEscapeKeydown={toggleModal}>
         <p>I am a modal!</p>
-        <p>{JSON.stringify(theme, null, 2)}</p>
+        <p
+          sx={{
+            overflowY: "scroll",
+          }}
+        >
+          {JSON.stringify(theme, null, 2)}
+        </p>
         <Button onClick={toggleModal}>Close me</Button>
       </StyledModal>
     </div>

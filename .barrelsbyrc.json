@@ -1,10 +1,11 @@
 {
   "directory": "./src",
   "delete": true,
-  "location": "top",
+  "local": true,
+  "location": "below",
   "name": "index",
   "structure": "flat",
   "verbose": false,
-  "include": [".ts$"],
+  "include": [".tsx?$"],
   "exclude": ["(spec|test).ts$"]
 }

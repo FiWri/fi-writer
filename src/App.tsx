@@ -1,13 +1,19 @@
+import { Route, Routes } from "react-router-dom";
 import { ModalProvider } from "styled-react-modal";
 import { ThemeProvider } from "theme-ui";
-import { Root } from "./pages/Root";
-import { theme } from "./themes";
+import { useTheme } from "./themes/useTheme";
+import { Home, Root } from "./views";
 
 function App() {
+  const { theme } = useTheme();
+
   return (
     <ThemeProvider theme={theme}>
       <ModalProvider>
-        <Root />
+        <Routes>
+          <Route path="/" element={<Root />} />
+          <Route path="/home" element={<Home />} />
+        </Routes>
       </ModalProvider>
     </ThemeProvider>
   );

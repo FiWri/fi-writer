@@ -1,17 +1,16 @@
 import { useState } from "react";
-import { Button, useColorMode } from "theme-ui";
+import { Button } from "theme-ui";
 import { ModalButton } from "../components/ModalButton";
-import logo from "./logo.svg";
+import { useTheme } from "../themes/useTheme";
 import "./Root.scss";
-import { RootHeader } from "./RootHeader";
+import logo from "./Root/logo.svg";
+import { RootHeader } from "./Root/RootHeader";
 
+interface RootProps {
+  switchTheme: () => void;
+}
 export const Root = () => {
-  const [colorMode, setColorMode] = useColorMode();
-
-  const toggleColorMode = () => {
-    setColorMode(colorMode === "light" ? "dark" : "light");
-  };
-
+  const { switchTheme } = useTheme();
   const [count, setCount] = useState(0);
   return (
     <div className="Root">
@@ -22,8 +21,8 @@ export const Root = () => {
           <Button type="button" onClick={() => setCount((count) => count + 1)}>
             count is: {count}
           </Button>
-          <Button variant="secondary" type="button" onClick={() => toggleColorMode()}>
-            toggle theme
+          <Button variant="secondary" type="button" onClick={() => switchTheme()}>
+            switch theme
           </Button>
           <ModalButton />
         </div>
