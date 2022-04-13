@@ -5,4 +5,6 @@
 export * from "./buttons";
 export * from "./colors";
 export * from "./fonts";
+export * from "./styles";
 export * from "./theme";
+export * from "./useTheme";
