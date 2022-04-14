@@ -1,5 +1,5 @@
-import { NodeModel, DefaultPortModel } from "@projectstorm/react-diagrams";
-import { BaseModelOptions } from "@projectstorm/react-canvas-core";
+import { BaseModelOptions } from '@projectstorm/react-canvas-core';
+import { DefaultPortModel, NodeModel } from '@projectstorm/react-diagrams';
 
 export interface CustomNodeModelOptions extends BaseModelOptions {
   color?: string;
@@ -11,21 +11,21 @@ export class CustomNodeModel extends NodeModel {
   constructor(options: CustomNodeModelOptions = {}) {
     super({
       ...options,
-      type: "ts-custom-node",
+      type: 'ts-custom-node',
     });
-    this.color = options.color || "red";
+    this.color = options.color || 'red';
 
     // setup an in and out port
     this.addPort(
       new DefaultPortModel({
         in: true,
-        name: "in",
+        name: 'in',
       })
     );
     this.addPort(
       new DefaultPortModel({
         in: false,
-        name: "out",
+        name: 'out',
       })
     );
   }

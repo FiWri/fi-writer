@@ -1,8 +1,8 @@
 {
-  "directory": "./src",
+  "directory": ["./src/components", "./src/features/home", "./src/features/story-viewer", "./src/themes"],
   "delete": true,
   "local": true,
-  "location": "below",
+  "location": "top",
   "name": "index",
   "structure": "flat",
   "verbose": false,
