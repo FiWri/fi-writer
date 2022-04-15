@@ -38,3 +38,9 @@ export const fiwri: Theme = {
   },
   styles,
 };
+
+/**
+ * // TODO: check if there is a cleaner way to share styles in theme-ui/react
+ * re-export border styles to allow its use in other components
+ */
+export { defaultBorderStyles } from './fiwri/borders';

@@ -1,5 +1,11 @@
 {
-  "directory": ["./src/components", "./src/features/home", "./src/features/story-viewer", "./src/themes"],
+  "directory": [
+    "./src/components",
+    "./src/features/home",
+    "./src/features/story-viewer",
+    "./src/features/story-writer",
+    "./src/themes"
+  ],
   "delete": true,
   "local": true,
   "location": "top",

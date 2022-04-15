@@ -8,6 +8,7 @@ const buttonStyles: ThemeUICSSObject = {
   boxShadow: 'default',
   fontFamily: 'inherit',
   '&:hover': {
+    bg: 'primary',
     boxShadow: 'hover',
   },
 };
@@ -18,6 +19,7 @@ const secondaryButtonStyles: ThemeUICSSObject = {
   boxShadow: 'default',
   fontFamily: 'inherit',
   '&:hover': {
+    bg: 'primaryLight',
     boxShadow: 'hover',
   },
 };

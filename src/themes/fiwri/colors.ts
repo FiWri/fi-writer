@@ -19,7 +19,7 @@ export const colors: ColorModesScale = {
     dark: {
       text: `#eee`,
       background: '#2E2836',
-      muted: 'rgba(0,0,0,.1)',
+      muted: '#6A538966',
       primary: '#F25F5C',
       primaryDark: '#B51916',
       primaryLight: '#FCBAB1',

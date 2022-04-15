@@ -25,19 +25,18 @@ export const useTheme = () => {
   const switchTheme = () => {
     const themeArray: Theme[] = [
       fiwri,
-      // base,
-      // bootstrap,
-      // bulma,
-      // dark,
-      // deep,
-      // funk,
-      // future,
-      // roboto,
-      sketchy,
-      // swiss,
-      // system,
-      // tailwind,
-      // tosh,
+      base,
+      bootstrap,
+      bulma,
+      dark,
+      deep,
+      funk,
+      future,
+      roboto,
+      swiss,
+      system,
+      tailwind,
+      tosh,
     ];
     const current = themeArray.indexOf(theme);
     console.log(`current theme index: ${current}`);

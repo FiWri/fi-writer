@@ -7,8 +7,8 @@ import { ThemeProvider } from 'theme-ui';
 import { NotFound } from './components';
 import { Home } from './features/home';
 import { StoryViewer } from './features/story-viewer';
+import { StoryWriter } from './features/story-writer';
 import { useTheme } from './themes/useTheme';
-import { Root } from './views';
 
 const AppWrapper: FC = (props) => (
   <div
@@ -27,9 +27,9 @@ function App() {
       <ModalProvider>
         <AppWrapper>
           <Routes>
-            <Route path="/" element={<Root />} />
-            <Route path="/home" element={<Home />} />
+            <Route path="/" element={<Home />} />
             <Route path="/story-viewer" element={<StoryViewer />} />
+            <Route path="/story-writer" element={<StoryWriter />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AppWrapper>
