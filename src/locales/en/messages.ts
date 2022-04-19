@@ -1,0 +1,1 @@
+/*eslint-disable*/export const messages={"A PWA made for planning and writing interactive fictions!":"A PWA made for planning and writing interactive fictions!","FiWri":"FiWri","Github":"Github","switch color mode":"switch color mode","switch theme":"switch theme"};

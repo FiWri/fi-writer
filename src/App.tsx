@@ -1,14 +1,13 @@
 /** @jsxImportSource theme-ui */
 
+import { i18n } from '@lingui/core';
+import { I18nProvider } from '@lingui/react';
 import { FC } from 'react';
-import { Route, Routes } from 'react-router-dom';
 import { ModalProvider } from 'styled-react-modal';
 import { ThemeProvider } from 'theme-ui';
-import { NotFound } from './components';
-import { Home } from './features/home';
-import { StoryViewer } from './features/story-viewer';
-import { StoryWriter } from './features/story-writer';
+import { Router } from './Router';
 import { useTheme } from './themes/useTheme';
+import { messages } from './locales/en/messages';
 
 const AppWrapper: FC = (props) => (
   <div
@@ -19,23 +18,21 @@ const AppWrapper: FC = (props) => (
     {...props}
   ></div>
 );
-function App() {
+export const App = () => {
   const { theme } = useTheme();
 
-  return (
-    <ThemeProvider theme={theme}>
-      <ModalProvider>
-        <AppWrapper>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/story-viewer" element={<StoryViewer />} />
-            <Route path="/story-writer" element={<StoryWriter />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </AppWrapper>
-      </ModalProvider>
-    </ThemeProvider>
-  );
-}
+  i18n.load('en', messages);
+  i18n.activate('en');
 
-export default App;
+  return (
+    <I18nProvider i18n={i18n}>
+      <ThemeProvider theme={theme}>
+        <ModalProvider>
+          <AppWrapper>
+            <Router />
+          </AppWrapper>
+        </ModalProvider>
+      </ThemeProvider>
+    </I18nProvider>
+  );
+};

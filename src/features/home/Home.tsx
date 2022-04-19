@@ -1,9 +1,10 @@
 /** @jsxImportSource theme-ui */
-
 import { keyframes } from '@emotion/react';
+import { Trans } from '@lingui/macro';
 import { Link as NavLink } from 'react-router-dom';
 import { Button, Flex, Heading, Image, Link, Text } from 'theme-ui';
 import { ModalButton } from '../../components/ModalButton';
+import { routes } from '../../Router';
 import { useColor, useTheme } from '../../themes';
 import logo from './fiwri.png';
 
@@ -37,46 +38,41 @@ export const Home = () => {
           pointerEvents: 'none',
         }}
       />
-      <Heading as="h1">This is FiWri!</Heading>
-      <Text>A PWA made for planning and writing interactive fictions!</Text>
+      <Heading as="h1">
+        <Trans>FiWri</Trans>
+      </Heading>
+      <Text>
+        <Trans>A PWA made for planning and writing interactive fictions!</Trans>
+      </Text>
       <Flex className="routes-wrapper">
-        <NavLink to="/story-viewer">
-          <Button type="button">Story viewer</Button>
+        <NavLink to={routes.STORY_VIEWER}>
+          <Button type="button">Route: Story viewer</Button>
         </NavLink>
-        <NavLink to="/story-writer">
-          <Button type="button">Story writer</Button>
+        <NavLink to={routes.STORY_WRITER}>
+          <Button type="button">Route: Story writer</Button>
         </NavLink>
       </Flex>
       <Flex className="test-buttons">
         <Button type="button" onClick={() => switchTheme()}>
-          switch theme
+          <Trans>switch theme</Trans>
         </Button>
         <Button
           variant="secondary"
           type="button"
           onClick={() => switchColorMode()}
         >
-          switch color mode
+          <Trans>switch color mode</Trans>
         </Button>
         <ModalButton />
       </Flex>
       <Text>
         <Link
           className="Root-link"
-          href="https://reactjs.org"
+          href="https://github.com/FiWri/fi-writer"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
-        </Link>
-        {' | '}
-        <Link
-          className="Root-link"
-          href="https://vitejs.dev/guide/features.html"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Vite Docs
+          <Trans>Github</Trans>
         </Link>
       </Text>
     </Flex>

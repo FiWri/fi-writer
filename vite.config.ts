@@ -8,7 +8,14 @@ export default defineConfig({
     port: 3001,
   },
   plugins: [
-    react(),
+    react({
+      babel: {
+        // Use .babelrc files, necessary to use LinguiJS CLI
+        babelrc: true,
+        // Use babel.config.js files
+        configFile: false,
+      },
+    }),
     // Declare icons for the PWA
     VitePWA({
       includeAssets: [
