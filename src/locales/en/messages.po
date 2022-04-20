@@ -13,22 +13,26 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/features/home/Home.tsx:45
-#~ msgid "A PWA made for planning and writing interactive fictions!"
-#~ msgstr "A PWA made for planning and writing interactive fictions!"
+#: src/features/home/Home.tsx:47
+msgid "A PWA made for planning and writing interactive fictions!"
+msgstr "A PWA made for planning and writing interactive fictions!"
 
-#: src/features/home/Home.tsx:42
-#~ msgid "FiWri"
-#~ msgstr "FiWri"
+#: src/features/home/Home.tsx:44
+msgid "FiWri"
+msgstr "FiWri"
 
-#: src/features/home/Home.tsx:75
-#~ msgid "Github"
-#~ msgstr "Github"
+#: src/features/home/Home.tsx:77
+msgid "Github"
+msgstr "Github"
 
-#: src/features/home/Home.tsx:64
-#~ msgid "switch color mode"
-#~ msgstr "switch color mode"
+#: src/features/home/Home.tsx:48
+#~ msgid "This is a test"
+#~ msgstr "This is a test"
 
-#: src/features/home/Home.tsx:57
-#~ msgid "switch theme"
-#~ msgstr "switch theme"
+#: src/features/home/Home.tsx:66
+msgid "switch color mode"
+msgstr "switch color mode"
+
+#: src/features/home/Home.tsx:59
+msgid "switch theme"
+msgstr "switch theme"

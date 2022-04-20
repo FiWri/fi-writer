@@ -13,22 +13,26 @@ msgstr ""
 "Language-Team: \n"
 "Plural-Forms: \n"
 
-#: src/features/home/Home.tsx:45
-#~ msgid "A PWA made for planning and writing interactive fictions!"
-#~ msgstr "Une application PWA pour plannifier et ecrire des histoires interactives !"
+#: src/features/home/Home.tsx:47
+msgid "A PWA made for planning and writing interactive fictions!"
+msgstr "Une application PWA pour plannifier et ecrire des histoires interactives !"
 
-#: src/features/home/Home.tsx:42
-#~ msgid "FiWri"
-#~ msgstr "FiWri"
+#: src/features/home/Home.tsx:44
+msgid "FiWri"
+msgstr "FiWri"
 
-#: src/features/home/Home.tsx:75
-#~ msgid "Github"
-#~ msgstr "Github"
+#: src/features/home/Home.tsx:77
+msgid "Github"
+msgstr "Github"
 
-#: src/features/home/Home.tsx:64
-#~ msgid "switch color mode"
-#~ msgstr "Changer de mode jour/nuit"
+#: src/features/home/Home.tsx:48
+#~ msgid "This is a test"
+#~ msgstr ""
 
-#: src/features/home/Home.tsx:57
-#~ msgid "switch theme"
-#~ msgstr "Changer de thème"
+#: src/features/home/Home.tsx:66
+msgid "switch color mode"
+msgstr "Changer de mode jour/nuit"
+
+#: src/features/home/Home.tsx:59
+msgid "switch theme"
+msgstr "Changer de thème"

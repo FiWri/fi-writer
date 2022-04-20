@@ -10,7 +10,6 @@ import {
   Flex,
   useThemeUI,
 } from 'theme-ui';
-import { defaultBorderStyles } from '../../../themes';
 
 const MenuBar = ({ editor }: { editor: Editor | null }) => {
   if (!editor) {
@@ -139,7 +138,9 @@ export const Tiptap = () => {
     backgroundColor: ({ colors }) => colors?.muted,
     marginTop: '1em',
     padding: '0.5em',
-    ...defaultBorderStyles,
+    border: 'thick',
+    color: 'text',
+    borderRadius: 'sketchy0',
   })(theme);
 
   const editor = useEditor({

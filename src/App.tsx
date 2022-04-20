@@ -5,9 +5,9 @@ import { I18nProvider } from '@lingui/react';
 import { FC } from 'react';
 import { ModalProvider } from 'styled-react-modal';
 import { ThemeProvider } from 'theme-ui';
-import { Router } from './Router';
-import { useTheme } from './themes/useTheme';
 import { messages } from './locales/en/messages';
+import { Router } from './Router';
+import { useTheme } from './features/themes';
 
 const AppWrapper: FC = (props) => (
   <div

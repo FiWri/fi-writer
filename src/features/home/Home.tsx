@@ -5,7 +5,7 @@ import { Link as NavLink } from 'react-router-dom';
 import { Button, Flex, Heading, Image, Link, Text } from 'theme-ui';
 import { ModalButton } from '../../components/ModalButton';
 import { routes } from '../../Router';
-import { useColor, useTheme } from '../../themes';
+import { useColor, useTheme } from '../themes';
 import logo from './fiwri.png';
 
 const rotate = keyframes({

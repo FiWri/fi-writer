@@ -1,5 +1,13 @@
-import { BaseModelOptions } from '@projectstorm/react-canvas-core';
+import {
+  BaseModelOptions,
+  DeserializeEvent,
+} from '@projectstorm/react-canvas-core';
 import { DefaultPortModel, NodeModel } from '@projectstorm/react-diagrams';
+
+export enum Direction {
+  IN = 'in',
+  OUT = 'out',
+}
 
 export interface CustomNodeModelOptions extends BaseModelOptions {
   color?: string;
@@ -19,13 +27,13 @@ export class CustomNodeModel extends NodeModel {
     this.addPort(
       new DefaultPortModel({
         in: true,
-        name: 'in',
+        name: Direction.IN,
       })
     );
     this.addPort(
       new DefaultPortModel({
         in: false,
-        name: 'out',
+        name: Direction.OUT,
       })
     );
   }
@@ -37,7 +45,7 @@ export class CustomNodeModel extends NodeModel {
     };
   }
 
-  deserialize(event): void {
+  deserialize(event: DeserializeEvent<this>): void {
     super.deserialize(event);
     this.color = event.data.color;
   }

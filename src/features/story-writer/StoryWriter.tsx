@@ -1,6 +1,5 @@
 import { Container } from 'theme-ui';
-import { defaultBorderStyles } from '../../themes/fiwri/borders';
-import { Tiptap } from './TipTap/Tiptap';
+import { Tiptap } from './components/Tiptap';
 
 export const StoryWriter = () => {
   return (
@@ -8,7 +7,9 @@ export const StoryWriter = () => {
       className="story-writer"
       sx={{
         padding: '1.5em',
-        ...defaultBorderStyles,
+        border: 'thick',
+        color: 'text',
+        borderRadius: 'sketchy0',
       }}
     >
       <Tiptap />
