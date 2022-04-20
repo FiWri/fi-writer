@@ -4,6 +4,7 @@ import { Trans } from '@lingui/macro';
 import { Link as NavLink } from 'react-router-dom';
 import { Button, Flex, Heading, Image, Link, Text } from 'theme-ui';
 import { ModalButton } from '../../components/ModalButton';
+import { useLocale } from '../../hooks';
 import { routes } from '../../Router';
 import { useColor, useTheme } from '../themes';
 import logo from './fiwri.png';
@@ -17,6 +18,7 @@ const rotate = keyframes({
 export const Home = () => {
   const { switchTheme } = useTheme();
   const { switchColorMode } = useColor();
+  const { switchLocale } = useLocale();
 
   return (
     <Flex
@@ -53,6 +55,9 @@ export const Home = () => {
         </NavLink>
       </Flex>
       <Flex className="test-buttons">
+        <Button type="button" onClick={() => switchLocale()}>
+          <Trans>switch language</Trans>
+        </Button>
         <Button type="button" onClick={() => switchTheme()}>
           <Trans>switch theme</Trans>
         </Button>

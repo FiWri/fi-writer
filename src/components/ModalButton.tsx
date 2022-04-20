@@ -1,12 +1,14 @@
 /** @jsxImportSource theme-ui */
 
-import { useState } from "react";
-import Modal from "styled-react-modal";
-import { Button, Theme, useThemeUI } from "theme-ui";
+import { Trans } from '@lingui/macro';
+import { useState } from 'react';
+import Modal from 'styled-react-modal';
+import { Button, Theme, useThemeUI } from 'theme-ui';
 
 const StyledModal = Modal.styled`
       align-items: center;
-      background-color: ${({ theme }: { theme: Theme }) => theme.colors?.background};
+      background-color: ${({ theme }: { theme: Theme }) =>
+        theme.colors?.background};
       border: solid ${({ theme }: { theme: Theme }) => theme.colors?.muted};
       border-radius: 3em;
       box-sizing: content-box; // flex doesn't seem to take padding into account when calculating size for border-box
@@ -31,17 +33,26 @@ export const ModalButton = () => {
 
   return (
     <div>
-      <Button onClick={toggleModal}>Click me</Button>
-      <StyledModal theme={theme} isOpen={isOpen} onBackgroundClick={toggleModal} onEscapeKeydown={toggleModal}>
+      <Button onClick={toggleModal}>
+        <Trans>Click me</Trans>
+      </Button>
+      <StyledModal
+        theme={theme}
+        isOpen={isOpen}
+        onBackgroundClick={toggleModal}
+        onEscapeKeydown={toggleModal}
+      >
         <p>I am a modal!</p>
         <p
           sx={{
-            overflowY: "scroll",
+            overflowY: 'scroll',
           }}
         >
           {JSON.stringify(theme, null, 2)}
         </p>
-        <Button onClick={toggleModal}>Close me</Button>
+        <Button onClick={toggleModal}>
+          <Trans>Close me</Trans>
+        </Button>
       </StyledModal>
     </div>
   );

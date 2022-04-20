@@ -50,6 +50,7 @@
     "eslint-plugin-react-hooks": "^4.4.0",
     "https-localhost": "^4.7.1",
     "jest": "^27.5.1",
+    "make-plural": "^7.1.0",
     "prettier": "^2.6.2",
     "sass": "^1.50.0",
     "typescript": "^4.5.4",
