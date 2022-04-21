@@ -56,3 +56,5 @@ Contributions can be made in various forms:
 * Feedback, bugs, or feature proposals using the proper issue template and labels
 * Code contributions made by forking the repository and make a PR
 * Translations using the translation tools (WIP maybe [Weblate](https://weblate.org/) or [Crowdin](https://crowdin.com/)?)
+
+You have a more complete document here: [CONTRIBUTING.md](./CONTRIBUTING.md)
