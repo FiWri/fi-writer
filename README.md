@@ -58,3 +58,7 @@ Contributions can be made in various forms:
 * Translations using the translation tools (WIP maybe [Weblate](https://weblate.org/) or [Crowdin](https://crowdin.com/)?)
 
 You have a more complete document here: [CONTRIBUTING.md](./CONTRIBUTING.md)
+
+## We use Discord for communication
+
+The [discord server](https://discord.gg/TCCbb5qFC8) is used both for development and communicating with the application users. There is a [specific channel](https://discord.com/channels/966586970966986762/966587028990988329) to talk about Fi-Writer development.

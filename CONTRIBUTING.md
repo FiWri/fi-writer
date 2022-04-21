@@ -12,6 +12,18 @@ We love your input! We want to make contributing to this project as easy and tra
 
 We use github to host code, to track issues and feature requests, as well as accept pull requests.
 
+## We use Discord for communication
+
+The [discord server](https://discord.gg/TCCbb5qFC8) is used both for development and communicating with the application users. There is a [specific channel](https://discord.com/channels/966586970966986762/966587028990988329) to talk about Fi-Writer development.
+
+## We use [Zenhub](https://www.zenhub.com/) for project management
+
+Zenhub is a project management tool that integrates seamlessly with Github issues for project management. It even has a [browser extension](https://www.zenhub.com/extension) for Chrome and Firefox to show Zenhub as a tab directly in the Github repository.
+
+Release are a group of long term goals that will justify realeasing a new version of the software.
+Epics are long term goals, made of smaller tasks.
+Tasks are short term goals, the basis of our work. They need to allow us to have a clear picture of a specific task, and it should be manageable in a short amount of time. It can be divided in subtasks if you realize the complexity is bigger than you thought.
+
 ## We use [Trunk based-development](https://trunkbaseddevelopment.com/), and all code changes happen through Pull Requests
 
 Pull requests are the best way to propose changes to the codebase (see some  on [Digital Ocean](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github)). We actively welcome your pull requests:
