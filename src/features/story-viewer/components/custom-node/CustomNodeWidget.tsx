@@ -2,6 +2,7 @@
 
 import { DiagramEngine, PortWidget } from '@projectstorm/react-diagrams-core';
 import { Component, FC } from 'react';
+
 import { CustomNodeModel } from './CustomNodeModel';
 
 const CirclePort: FC = (props) => (

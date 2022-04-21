@@ -1,4 +1,5 @@
 import type { ThemeUICSSObject } from '@theme-ui/css';
+
 import { Variants } from '../interfaces/Variants';
 
 export const defaultBorderStyles: ThemeUICSSObject = {

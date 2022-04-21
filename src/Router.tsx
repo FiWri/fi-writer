@@ -1,8 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
-import { NotFound } from './components';
-import { Home } from './features/home';
-import { StoryViewer } from './features/story-viewer';
-import { StoryWriter } from './features/story-writer';
+
+import { NotFound } from '~/components';
+import { Home } from '~/features/home';
+import { StoryViewer } from '~/features/story-viewer';
+import { StoryWriter } from '~/features/story-writer';
 
 export const routes = {
   HOME: '/',

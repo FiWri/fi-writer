@@ -2,6 +2,7 @@ import createEngine, {
   DefaultLinkModel,
   DiagramModel,
 } from '@projectstorm/react-diagrams';
+
 import { CanvasWidget, CustomNodeFactory, CustomNodeModel } from './components';
 
 export const StoryViewer = () => {

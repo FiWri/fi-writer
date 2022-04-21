@@ -1,5 +1,6 @@
 import { i18n } from '@lingui/core';
-import { Locales } from '../locales';
+
+import { Locales } from '~/locales';
 
 export const useLocale = () => {
   const switchLocale = () => {

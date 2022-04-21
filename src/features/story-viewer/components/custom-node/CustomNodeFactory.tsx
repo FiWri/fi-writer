@@ -3,6 +3,7 @@ import {
   GenerateWidgetEvent,
 } from '@projectstorm/react-canvas-core';
 import { DiagramEngine } from '@projectstorm/react-diagrams-core';
+
 import { CustomNodeModel } from './CustomNodeModel';
 import { CustomNodeWidget } from './CustomNodeWidget';
 

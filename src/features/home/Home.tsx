@@ -3,10 +3,12 @@ import { keyframes } from '@emotion/react';
 import { Trans } from '@lingui/macro';
 import { Link as NavLink } from 'react-router-dom';
 import { Button, Flex, Heading, Image, Link, Text } from 'theme-ui';
-import { ModalButton } from '../../components/ModalButton';
-import { useLocale } from '../../hooks';
-import { routes } from '../../Router';
-import { useColor, useTheme } from '../themes';
+
+import { ModalButton } from '~/components/ModalButton';
+import { useLocale } from '~/hooks';
+import { routes } from '~/Router';
+import { useColor, useTheme } from '~/themes';
+
 import logo from './fiwri.png';
 
 const rotate = keyframes({

@@ -1,4 +1,5 @@
 import { makeTheme } from '@theme-ui/css/utils';
+
 import { ScalesAndStyles } from '../interfaces/ScalesAndStyles';
 
 export const scalesAndStyles: ScalesAndStyles = makeTheme({

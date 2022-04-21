@@ -6,9 +6,10 @@ import { de, en, fr } from 'make-plural/plurals';
 import { FC } from 'react';
 import { ModalProvider } from 'styled-react-modal';
 import { ThemeProvider } from 'theme-ui';
-import { useTheme } from './features/themes';
-import { deMessages, enMessages, frMessages, Locales } from './locales';
-import { Router } from './Router';
+
+import { deMessages, enMessages, frMessages, Locales } from '~/locales';
+import { Router } from '~/Router';
+import { useTheme } from '~/themes';
 
 const AppWrapper: FC = (props) => (
   <div
