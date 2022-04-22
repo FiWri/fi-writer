@@ -5,9 +5,8 @@ import { Link as NavLink } from 'react-router-dom';
 import { Button, Flex, Heading, Image, Link, Text } from 'theme-ui';
 
 import { ModalButton } from '~/components/ModalButton';
-import { useLocale } from '~/hooks';
+import { useColor, useLocale, useTheme } from '~/hooks';
 import { routes } from '~/Router';
-import { useColor, useTheme } from '~/themes';
 
 import logo from './fiwri.png';
 

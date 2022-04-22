@@ -7,9 +7,9 @@ import { FC } from 'react';
 import { ModalProvider } from 'styled-react-modal';
 import { ThemeProvider } from 'theme-ui';
 
+import { useTheme } from '~/hooks';
 import { deMessages, enMessages, frMessages, Locales } from '~/locales';
 import { Router } from '~/Router';
-import { useTheme } from '~/themes';
 
 const AppWrapper: FC = (props) => (
   <div
