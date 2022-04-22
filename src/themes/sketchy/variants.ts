@@ -30,6 +30,7 @@ const formStyles: ThemeUICSSObject = {
 };
 
 export const variants: Variants = {
+  // used in custom components to get similar border styles in one line
   customBorderStyles: {
     default: {
       border: 'thick',

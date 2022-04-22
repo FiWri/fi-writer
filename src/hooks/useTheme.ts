@@ -15,7 +15,7 @@ import {
 import { atom, useAtom } from 'jotai';
 import { Theme } from 'theme-ui';
 
-import { sketchy } from '../sketchy';
+import { sketchy } from '../themes';
 
 const themeAtom = atom(sketchy as Theme);
 
