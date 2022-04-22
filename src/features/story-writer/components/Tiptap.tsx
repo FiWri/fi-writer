@@ -1,5 +1,3 @@
-/** @jsxImportSource theme-ui */
-
 import { css as createClassName } from '@emotion/css';
 import { Editor, EditorContent, useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';

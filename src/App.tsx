@@ -1,24 +1,22 @@
-/** @jsxImportSource theme-ui */
-
 import { i18n } from '@lingui/core';
 import { I18nProvider } from '@lingui/react';
 import { de, en, fr } from 'make-plural/plurals';
 import { FC } from 'react';
 import { ModalProvider } from 'styled-react-modal';
-import { ThemeProvider } from 'theme-ui';
+import { Box, ThemeProvider } from 'theme-ui';
 
 import { useTheme } from '~/hooks';
 import { deMessages, enMessages, frMessages, Locales } from '~/locales';
 import { Router } from '~/Router';
 
 const AppWrapper: FC = (props) => (
-  <div
+  <Box
     sx={{
       width: '100vw',
       height: '100vh',
     }}
     {...props}
-  ></div>
+  />
 );
 export const App = () => {
   const { theme } = useTheme();

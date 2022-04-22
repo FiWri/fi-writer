@@ -1,4 +1,3 @@
-/** @jsxImportSource theme-ui */
 import { keyframes } from '@emotion/react';
 import { Trans } from '@lingui/macro';
 import { Link as NavLink } from 'react-router-dom';

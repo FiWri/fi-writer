@@ -1,12 +1,11 @@
-/** @jsxImportSource theme-ui */
-
 import { DiagramEngine, PortWidget } from '@projectstorm/react-diagrams-core';
 import { Component, FC } from 'react';
+import { Box } from 'theme-ui';
 
 import { CustomNodeModel } from './CustomNodeModel';
 
 const CirclePort: FC = (props) => (
-  <div
+  <Box
     className="circle-port"
     sx={{
       width: '12px',
@@ -20,11 +19,11 @@ const CirclePort: FC = (props) => (
       },
     }}
     {...props}
-  ></div>
+  />
 );
 
 const CustomNode: FC = (props) => (
-  <div
+  <Box
     className="custom-node"
     sx={{
       border: 'solid 2px gray',
@@ -37,13 +36,13 @@ const CustomNode: FC = (props) => (
       position: 'relative',
     }}
     {...props}
-  ></div>
+  />
 );
 interface CustomNodeColorProps {
   nodeColor: string;
 }
 const CustomNodeColor: FC<CustomNodeColorProps> = ({ nodeColor, ...props }) => (
-  <div
+  <Box
     className="custom-node-colour"
     sx={{
       bg: nodeColor,
@@ -56,7 +55,7 @@ const CustomNodeColor: FC<CustomNodeColorProps> = ({ nodeColor, ...props }) => (
       borderRadius: '10px',
     }}
     {...props}
-  ></div>
+  />
 );
 
 export interface CustomNodeWidgetProps {
