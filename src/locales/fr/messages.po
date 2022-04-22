@@ -37,6 +37,14 @@ msgstr "FiWri"
 msgid "Github"
 msgstr "Github"
 
+#: src/features/demo-feature/components/CreateTodo.tsx:30
+msgid "demo-feature.create-button"
+msgstr ""
+
+#: src/features/demo-feature/DemoFeature.tsx:23
+msgid "demo-feature.title"
+msgstr "Liste des taches"
+
 #: src/features/home/Home.tsx:69
 msgid "switch color mode"
 msgstr "Changer de mode jour/nuit"
