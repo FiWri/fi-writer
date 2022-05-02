@@ -14,6 +14,7 @@ const AppWrapper: FC = (props) => (
     sx={{
       width: '100vw',
       height: '100vh',
+      variant: 'customScrollbar.default', // theme-ui doesn't support multiple variants yet, we'll see in the future
     }}
     {...props}
   />
@@ -36,11 +37,11 @@ export const App = () => {
   return (
     <I18nProvider i18n={i18n}>
       <ThemeProvider theme={theme}>
-        <ModalProvider>
-          <AppWrapper>
+        <AppWrapper>
+          <ModalProvider>
             <Router />
-          </AppWrapper>
-        </ModalProvider>
+          </ModalProvider>
+        </AppWrapper>
       </ThemeProvider>
     </I18nProvider>
   );

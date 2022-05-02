@@ -8,7 +8,7 @@ export const StoryWriter = () => {
       className="story-writer"
       sx={{
         padding: '1.5em',
-        variant: 'customBorderStyles.default',
+        variant: 'customBorder.default',
       }}
     >
       <Tiptap />

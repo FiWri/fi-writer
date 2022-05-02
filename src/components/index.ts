@@ -1,2 +1,2 @@
-export * from './ModalButton';
 export * from './NotFound';
+export * from './SimpleModal';

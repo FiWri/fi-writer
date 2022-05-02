@@ -11,6 +11,12 @@ type ThemeRadii = Scale<CSS.Property.BorderRadius<TLengthStyledSystem>> & {
   circle: string;
 };
 
+type ThemeBorders = Scale<CSS.Property.Border> & {
+  thick: string;
+  thin: string;
+};
+
 export type ScalesAndStyles = Theme & {
   radii: ThemeRadii;
+  borders: ThemeBorders;
 };

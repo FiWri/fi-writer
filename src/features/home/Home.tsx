@@ -3,8 +3,8 @@ import { Trans } from '@lingui/macro';
 import { Link as NavLink } from 'react-router-dom';
 import { Button, Flex, Heading, Image, Link, Text } from 'theme-ui';
 
-import { ModalButton } from '~/components/ModalButton';
-import { useColor, useLocale, useTheme } from '~/hooks';
+import { SimpleModal } from '~/components';
+import { useColor, useLocale, useSimpleModal, useTheme } from '~/hooks';
 import { routes } from '~/Router';
 
 import logo from './fiwri.png';
@@ -16,9 +16,10 @@ const rotate = keyframes({
 });
 
 export const Home = () => {
-  const { switchTheme } = useTheme();
+  const { theme, switchTheme } = useTheme();
   const { switchColorMode } = useColor();
   const { switchLocale } = useLocale();
+  const { openModal } = useSimpleModal();
 
   return (
     <Flex
@@ -68,7 +69,10 @@ export const Home = () => {
         >
           <Trans>switch color mode</Trans>
         </Button>
-        <ModalButton />
+        <Button type="button" onClick={() => openModal()}>
+          <Trans>open modal</Trans>
+        </Button>
+        <SimpleModal>{JSON.stringify(theme, undefined, 2)}</SimpleModal>
       </Flex>
       <Text>
         <Link
