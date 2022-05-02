@@ -31,11 +31,30 @@ const formStyles: ThemeUICSSObject = {
 
 export const variants: Variants = {
   // used in custom components to get similar border styles in one line
-  customBorderStyles: {
+  customBorder: {
     default: {
       border: 'thick',
       color: 'text',
       borderRadius: 'radius0',
+    },
+  },
+  customScrollbar: {
+    default: {
+      /* Works on Firefox */
+      scrollbarWidth: 'thin',
+      scrollbarColor: 'blue orange',
+      /* Works on Chrome, Edge, and Safari */
+      '*::-webkit-scrollbar': {
+        width: '12px',
+      },
+      '*::-webkit-scrollbar-track': {
+        background: 'secondary',
+      },
+      '*::-webkit-scrollbar-thumb': {
+        backgroundColor: 'primary',
+        borderRadius: 'circle',
+        border: 'thin',
+      },
     },
   },
   buttons: {

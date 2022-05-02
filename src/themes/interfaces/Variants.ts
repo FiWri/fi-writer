@@ -4,7 +4,10 @@ export type Variants = Pick<
   Theme,
   'messages' | 'alerts' | 'badges' | 'links' | 'buttons' | 'forms' | 'cards'
 > & {
-  customBorderStyles: {
+  customBorder: {
+    default: ThemeUICSSObject;
+  };
+  customScrollbar: {
     default: ThemeUICSSObject;
   };
 };
