@@ -1,24 +1,28 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "allowJs": false,
-    "skipLibCheck": false,
-    "esModuleInterop": false,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
+    "baseUrl": ".",
     "forceConsistentCasingInFileNames": true,
+    "isolatedModules": true,
+    "jsx": "react-jsx",
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "esModuleInterop": false,
     "module": "ESNext",
     "moduleResolution": "Node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx",
-    "baseUrl": ".",
     "paths": {
       "~/*": ["./src/*"],
-    }
+    },
+    "resolveJsonModule": true,
+    // * Skip lib checking for react diagrams because of errors
+    "skipLibCheck": true,
+    "strict": true,
+    // * Must had strict null checks to false because our brick return PortModel | null
+    // * And library accepts only PortModel
+    "strictNullChecks": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true,
   },
   "include": ["src"],
   "references": [{

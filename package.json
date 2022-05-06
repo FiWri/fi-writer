@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "build": "npm run barrels && tsc && vite build",
+    "build": "tsc && vite build",
     "dev": "vite",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "i18n": "npm run i18n:extract && npm run i18n:compile",

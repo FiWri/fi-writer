@@ -45,7 +45,9 @@ export const Home = () => {
         <Trans>FiWri</Trans>
       </Heading>
       <Text>
-        <Trans>A PWA made for planning and writing interactive fictions!</Trans>
+        <Trans id="home.app-description">
+          A PWA made for planning and writing interactive fictions!
+        </Trans>
       </Text>
       <Flex className="routes-wrapper">
         <NavLink to={routes.STORY_VIEWER}>

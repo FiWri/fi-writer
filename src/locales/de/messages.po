@@ -17,34 +17,46 @@ msgstr ""
 msgid "404-not-found"
 msgstr ""
 
-#: src/features/home/Home.tsx:47
-msgid "A PWA made for planning and writing interactive fictions!"
-msgstr "Eine PWA für die Planung und das Schreiben interaktiver Fiktionen!"
+#: src/features/home/Home.tsx:48
+#~ msgid "A PWA made for planning and writing interactive fictions!"
+#~ msgstr "Eine PWA für die Planung und das Schreiben interaktiver Fiktionen!"
 
 #: src/components/ModalButton.tsx:37
-msgid "Click me"
-msgstr "Klick mich"
+#~ msgid "Click me"
+#~ msgstr "Klick mich"
 
 #: src/components/ModalButton.tsx:54
-msgid "Close me"
-msgstr "Schließt mich"
+#~ msgid "Close me"
+#~ msgstr "Schließt mich"
 
-#: src/features/home/Home.tsx:44
+#: src/features/home/Home.tsx:45
 msgid "FiWri"
 msgstr "FiWri"
 
-#: src/features/home/Home.tsx:80
+#: src/features/home/Home.tsx:86
 msgid "Github"
 msgstr "Github"
 
-#: src/features/home/Home.tsx:69
+#: src/features/home/Home.tsx:48
+msgid "home.app-description"
+msgstr ""
+
+#: src/components/SimpleModal.tsx:60
+msgid "modal.close"
+msgstr ""
+
+#: src/features/home/Home.tsx:75
+msgid "open modal"
+msgstr ""
+
+#: src/features/home/Home.tsx:72
 msgid "switch color mode"
 msgstr "Farbmodus wechseln"
 
-#: src/features/home/Home.tsx:59
+#: src/features/home/Home.tsx:62
 msgid "switch language"
 msgstr "Sprache wechseln"
 
-#: src/features/home/Home.tsx:62
+#: src/features/home/Home.tsx:65
 msgid "switch theme"
 msgstr "Wechselthema"
