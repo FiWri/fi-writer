@@ -49,10 +49,14 @@ export const Home = () => {
       </Text>
       <Flex className="routes-wrapper">
         <NavLink to={routes.STORY_VIEWER}>
-          <Button type="button">Route: Story viewer</Button>
+          <Button data-testid="home.nav-story-viewer" type="button">
+            Route: Story viewer
+          </Button>
         </NavLink>
         <NavLink to={routes.STORY_WRITER}>
-          <Button type="button">Route: Story writer</Button>
+          <Button data-testid="home.nav-story-writer" type="button">
+            Route: Story writer
+          </Button>
         </NavLink>
       </Flex>
       <Flex className="test-buttons">
