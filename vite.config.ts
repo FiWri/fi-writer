@@ -27,7 +27,7 @@ export default defineConfig({
     // Declare icons for the PWA
     VitePWA({
       includeAssets: [
-        '/icons/favicon.svg',
+        '/icons/favicon.png',
         '/icons/favicon.ico',
         'robots.txt',
         '/icons/apple-touch-icon.png',
@@ -40,7 +40,7 @@ export default defineConfig({
         theme_color: '#fff2d6',
         icons: [
           {
-            src: '/icons/pwa-192x192.png',
+            src: 'pwa-192x192.png',
             sizes: '192x192',
             type: 'image/png',
           },
