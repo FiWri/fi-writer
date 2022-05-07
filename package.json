@@ -4,21 +4,21 @@
   "version": "0.0.0",
   "scripts": {
     "build": "tsc && vite build",
-    "cy:start": "npm start && wait-on http-get://localhost:3001",
-    "cy:open": "start-server-and-test dev http-get://localhost:3001 'cypress open'",
-    "cy:run": "start-server-and-test dev http-get://localhost:3001 'cypress run'",
+    "cy": "start-server-and-test dev http-get://localhost:3001 'cypress run'",
+    "cy:ui": "start-server-and-test dev http-get://localhost:3001 'cypress open'",
     "dev": "vite",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
     "i18n": "npm run i18n:extract && npm run i18n:compile",
     "i18n:extract": "lingui extract",
     "i18n:compile": "lingui compile --strict --typescript",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
+    "prepare": "husky install",
     "prettier": "prettier \"src/**/*.{js,jsx,ts,tsx}\" --write",
     "preview": "vite preview",
     "serve": "vite build && vite preview",
     "serve-https": "serve dist",
-    "test": "vitest",
-    "prepare": "husky install"
+    "test": "npm run vitest && npm run cy",
+    "vitest": "vitest run"
   },
   "dependencies": {
     "@emotion/css": "^11.9.0",
