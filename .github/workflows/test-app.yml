@@ -1,7 +1,7 @@
 # This GitHub action runs Cypress end-to-end tests.
 # It includes NPM installation, custom caching and lots of configuration options.
 # It will also record videos and store the ones from failures as Artifacts in the repository
-name: End-to-end tests
+name: Test
 on: [push]
 # on:
 #   push:
@@ -9,19 +9,26 @@ on: [push]
 #   pull_request:
 #     branches: [trunk]
 jobs:
-  cypress-run:
+  setup:
     runs-on: ubuntu-latest
-    name: Cypress with artifacts
+    name: Setup project
     steps:
       # install NPM dependencies, cache them correctly
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Install Node packages
+      - name: Install Node
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
           cache: 'npm'
-      - name: Cypress run
+      - name: Install packages
+        run: npm ci
+  cypress-run:
+    runs-on: ubuntu-latest
+    name: Cypress with artifacts
+    needs: setup
+    steps:
+      - name: Run tests with dev server
         uses: cypress-io/github-action@v2
         with:
           start: npm run dev
@@ -33,14 +40,23 @@ jobs:
       # thus we store screenshots only on failures
       # Alternative: create and commit an empty cypress/screenshots folder
       # to always have something to upload
-      - uses: actions/upload-artifact@v2
+      - name: Upload screenshots on test failures
+        uses: actions/upload-artifact@v2
         if: failure()
         with:
           name: cypress-screenshots
           path: cypress/screenshots
       # Test run video was always captured, so this action uses "always()" condition
-      - uses: actions/upload-artifact@v2
+      - name: Upload videos on test failures
+        uses: actions/upload-artifact@v2
         if: always()
         with:
           name: cypress-videos
           path: cypress/videos
+  vitest:
+    runs-on: ubuntu-latest
+    name: Vitest
+    needs: setup
+    steps:
+      - name: Run unit tests
+        run: npm run vitest run
