@@ -7,7 +7,7 @@ import { de, en, fr } from 'make-plural/plurals';
 import { FC } from 'react';
 
 import { useTheme } from '~/hooks';
-import { deMessages, enMessages, frMessages, Locales } from '~/locales';
+import { deMessages, enMessages, frMessages, FiwriLocales } from '~/locales';
 import { Router } from '~/Router';
 
 const AppWrapper: FC = (props) => (
@@ -33,7 +33,7 @@ export const App = () => {
     en: enMessages,
     fr: frMessages,
   });
-  i18n.activate(Locales.en);
+  i18n.activate(FiwriLocales.en);
 
   return (
     <I18nProvider i18n={i18n}>

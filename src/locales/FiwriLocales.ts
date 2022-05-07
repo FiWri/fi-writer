@@ -1,4 +1,4 @@
-export enum Locales {
+export enum FiwriLocales {
   de = 'de',
   en = 'en',
   fr = 'fr',

@@ -1,11 +1,11 @@
 import { i18n } from '@lingui/core';
 
-import { Locales } from '~/locales';
+import { FiwriLocales } from '~/locales';
 
 export const useLocale = () => {
   const switchLocale = () => {
-    const locales = Object.values(Locales);
-    const currentLocale = i18n.locale as Locales;
+    const locales = Object.values(FiwriLocales);
+    const currentLocale = i18n.locale as FiwriLocales;
     const currentLocaleIndex = locales.findIndex(
       (locale) => currentLocale === locale
     );

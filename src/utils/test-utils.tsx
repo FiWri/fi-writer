@@ -10,7 +10,7 @@ import { ReactElement } from 'react';
 import { BrowserRouter } from 'react-router-dom';
 
 import { useTheme } from '~/hooks';
-import { deMessages, enMessages, frMessages, Locales } from '~/locales';
+import { deMessages, enMessages, frMessages, FiwriLocales } from '~/locales';
 
 const I18n = ({ children }: { children: ReactElement }) => {
   i18n.loadLocaleData({
@@ -23,7 +23,7 @@ const I18n = ({ children }: { children: ReactElement }) => {
     en: enMessages,
     fr: frMessages,
   });
-  i18n.activate(Locales.en);
+  i18n.activate(FiwriLocales.en);
   return <I18nProvider i18n={i18n}>{children}</I18nProvider>;
 };
 
