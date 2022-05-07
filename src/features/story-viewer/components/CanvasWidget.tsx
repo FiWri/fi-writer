@@ -1,4 +1,4 @@
-/** @jsxImportSource theme-ui */
+/** @jsxImportSource @theme-ui/core */
 
 import { CanvasWidget as CoreCanvasWidget } from '@projectstorm/react-canvas-core';
 import { DiagramEngine } from '@projectstorm/react-diagrams';

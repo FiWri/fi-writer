@@ -1,10 +1,9 @@
 import { keyframes } from '@emotion/react';
 import { Trans } from '@lingui/macro';
+import { Button, Flex, Heading, Image, Link, Text } from '@theme-ui/components';
 import { Link as NavLink } from 'react-router-dom';
-import { Button, Flex, Heading, Image, Link, Text } from 'theme-ui';
 
-import { SimpleModal } from '~/components';
-import { useColor, useLocale, useSimpleModal, useTheme } from '~/hooks';
+import { useColor, useLocale, useTheme } from '~/hooks';
 import { routes } from '~/Router';
 
 import logo from './fiwri.png';
@@ -16,10 +15,9 @@ const rotate = keyframes({
 });
 
 export const Home = () => {
-  const { theme, switchTheme } = useTheme();
+  const { switchTheme } = useTheme();
   const { switchColorMode } = useColor();
   const { switchLocale } = useLocale();
-  const { openModal } = useSimpleModal();
 
   return (
     <Flex
@@ -71,10 +69,6 @@ export const Home = () => {
         >
           <Trans>switch color mode</Trans>
         </Button>
-        <Button type="button" onClick={() => openModal()}>
-          <Trans>open modal</Trans>
-        </Button>
-        <SimpleModal>{JSON.stringify(theme, undefined, 2)}</SimpleModal>
       </Flex>
       <Text>
         <Link

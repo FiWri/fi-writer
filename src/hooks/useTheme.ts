@@ -1,3 +1,4 @@
+import { Theme } from '@theme-ui/core';
 import {
   base,
   bootstrap,
@@ -13,7 +14,6 @@ import {
   tosh,
 } from '@theme-ui/presets';
 import { atom, useAtom } from 'jotai';
-import { Theme } from 'theme-ui';
 
 import { sketchy } from '../themes';
 

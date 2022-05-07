@@ -1,6 +1,6 @@
 import { DiagramEngine, PortWidget } from '@projectstorm/react-diagrams-core';
+import { Box } from '@theme-ui/components';
 import { Component, FC } from 'react';
-import { Box } from 'theme-ui';
 
 import { CustomNodeModel } from './CustomNodeModel';
 

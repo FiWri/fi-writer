@@ -10,7 +10,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig({
   esbuild: {
     jsxFactory: 'jsx',
-    jsxInject: `import { jsx } from 'theme-ui'`,
+    jsxInject: `import { jsx } from '@theme-ui/core'`,
   },
   server: {
     port: 3001,

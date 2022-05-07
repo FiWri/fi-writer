@@ -2,11 +2,11 @@ import { describe, expect, it } from 'vitest';
 
 import { render, RenderWith, screen } from '~/utils/test-utils';
 
-import { App } from './App';
+import { Home } from './Home';
 
-describe('App', () => {
-  it('the app renders in the router', () => {
-    render(<App />, RenderWith.ROUTER);
+describe('Home', () => {
+  it('the home component renders with providers', () => {
+    render(<Home />, RenderWith.ALL);
     expect(screen.getByText(/Fiwri/i)).toBeInTheDocument();
   });
 });

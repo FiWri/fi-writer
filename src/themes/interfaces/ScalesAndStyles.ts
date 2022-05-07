@@ -1,6 +1,6 @@
+import { Theme, TLengthStyledSystem } from '@theme-ui/core';
 import { Scale } from '@theme-ui/css';
 import * as CSS from 'csstype';
-import { Theme, TLengthStyledSystem } from 'theme-ui';
 
 type ThemeRadii = Scale<CSS.Property.BorderRadius<TLengthStyledSystem>> & {
   radius0: string;

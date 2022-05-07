@@ -17,46 +17,26 @@ msgstr ""
 msgid "404-not-found"
 msgstr "The page you're trying to reach does not exist. Sorry about that!"
 
-#: src/features/home/Home.tsx:48
-#~ msgid "A PWA made for planning and writing interactive fictions!"
-#~ msgstr "A PWA made for planning and writing interactive fictions!"
-
-#: src/components/ModalButton.tsx:37
-#~ msgid "Click me"
-#~ msgstr "Click me"
-
-#: src/components/ModalButton.tsx:54
-#~ msgid "Close me"
-#~ msgstr "Close me"
-
-#: src/features/home/Home.tsx:45
+#: src/features/home/Home.tsx:43
 msgid "FiWri"
 msgstr "FiWri"
 
-#: src/features/home/Home.tsx:86
+#: src/features/home/Home.tsx:80
 msgid "Github"
 msgstr "Github"
 
-#: src/features/home/Home.tsx:48
+#: src/features/home/Home.tsx:46
 msgid "home.app-description"
 msgstr "A PWA made for planning and writing interactive fictions!"
 
-#: src/components/SimpleModal.tsx:60
-msgid "modal.close"
-msgstr "Close"
-
-#: src/features/home/Home.tsx:75
-msgid "open modal"
-msgstr "open modal"
-
-#: src/features/home/Home.tsx:72
+#: src/features/home/Home.tsx:70
 msgid "switch color mode"
 msgstr "switch color mode"
 
-#: src/features/home/Home.tsx:62
+#: src/features/home/Home.tsx:60
 msgid "switch language"
 msgstr "switch language"
 
-#: src/features/home/Home.tsx:65
+#: src/features/home/Home.tsx:63
 msgid "switch theme"
 msgstr "switch theme"
