@@ -16,7 +16,7 @@ jobs:
         uses: cypress-io/github-action@v2
         with:
           start: npm run dev
-          wait-on: 'http-get://localhost:3001'
+          wait-on: 'http://localhost:3001'
           wait-on-timeout: 120
       # after the test run completes
       # store videos and any screenshots

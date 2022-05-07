@@ -1,11 +1,7 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, and build the source code across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 name: Build using Node.js
-on:
-  push:
-    branches: [all]
-  pull_request:
-    branches: [trunk]
+on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
