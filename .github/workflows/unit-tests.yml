@@ -1,19 +1,25 @@
 # This GitHub action runs vitest unit tests.
 # It includes NPM installation, custom caching and lots of configuration options.
-name: Test with Vitest
-on:
-  push:
-    branches: [trunk]
-  pull_request:
-    branches: [trunk]
+name: Unit tests
+on: [push]
+# on:
+#   push:
+#     branches: [trunk]
+#   pull_request:
+#     branches: [trunk]
 jobs:
-  build:
+  vitest:
     runs-on: ubuntu-latest
     name: Vitest
     steps:
-      # install NPM dependencies, cache them correctly
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Install Node packages
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          cache: 'npm'
+      - run: npm ci
       # run vitest
       - name: Run vitest
         run: npm run vitest run

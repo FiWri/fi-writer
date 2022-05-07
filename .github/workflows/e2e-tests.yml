@@ -3,6 +3,11 @@
 # It will also record videos and store the ones from failures as Artifacts in the repository
 name: End-to-end tests
 on: [push]
+# on:
+#   push:
+#     branches: [trunk]
+#   pull_request:
+#     branches: [trunk]
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
@@ -11,7 +16,11 @@ jobs:
       # install NPM dependencies, cache them correctly
       - name: Checkout
         uses: actions/checkout@v3
-      # run all Cypress tests
+      - name: Install Node packages
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18.x'
+          cache: 'npm'
       - name: Cypress run
         uses: cypress-io/github-action@v2
         with:
