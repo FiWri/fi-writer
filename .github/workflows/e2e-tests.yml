@@ -2,12 +2,11 @@
 # It includes NPM installation, custom caching and lots of configuration options.
 # It will also record videos and store the ones from failures as Artifacts in the repository
 name: E2E Tests
-on: [push]
-# on:
-#   push:
-#     branches: [trunk]
-#   pull_request:
-#     branches: [trunk]
+on:
+  push:
+    branches: [trunk]
+  pull_request:
+    branches: [trunk]
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
