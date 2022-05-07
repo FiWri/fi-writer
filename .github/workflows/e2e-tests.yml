@@ -12,7 +12,6 @@ jobs:
   cypress-run:
     runs-on: ubuntu-latest
     name: Cypress with artifacts
-    needs: setup
     steps:
       # install NPM dependencies, cache them correctly
       - name: Checkout
