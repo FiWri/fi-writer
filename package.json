@@ -13,10 +13,12 @@
     "i18n:extract": "lingui extract",
     "i18n:compile": "lingui compile --strict --typescript",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
+    "prettier": "prettier \"src/**/*.{js,jsx,ts,tsx}\" --write",
     "preview": "vite preview",
     "serve": "vite build && vite preview",
     "serve-https": "serve dist",
-    "test": "vitest"
+    "test": "vitest",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@emotion/css": "^11.9.0",
@@ -61,7 +63,9 @@
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
     "https-localhost": "^4.7.1",
+    "husky": "^7.0.4",
     "jsdom": "^19.0.0",
+    "lint-staged": "^12.4.1",
     "make-plural": "^7.1.0",
     "prettier": "^2.6.2",
     "start-server-and-test": "^1.14.0",
@@ -69,5 +73,9 @@
     "vite": "^2.9.0",
     "vite-plugin-pwa": "^0.11.13",
     "vitest": "^0.10.5"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,md,html,css}": "prettier --write",
+    "*.{js,jsx,ts,tsx}": "eslint --fix"
   }
 }
