@@ -1,7 +1,7 @@
 # This GitHub action runs Cypress end-to-end tests.
 # It includes NPM installation, custom caching and lots of configuration options.
 # It will also record videos and store the ones from failures as Artifacts in the repository
-name: Test
+name: E2E Tests
 on: [push]
 # on:
 #   push:
@@ -9,9 +9,10 @@ on: [push]
 #   pull_request:
 #     branches: [trunk]
 jobs:
-  setup:
+  cypress-run:
     runs-on: ubuntu-latest
-    name: Setup project
+    name: Cypress with artifacts
+    needs: setup
     steps:
       # install NPM dependencies, cache them correctly
       - name: Checkout
@@ -23,11 +24,6 @@ jobs:
           cache: 'npm'
       - name: Install packages
         run: npm ci
-  cypress-run:
-    runs-on: ubuntu-latest
-    name: Cypress with artifacts
-    needs: setup
-    steps:
       - name: Run tests with dev server
         uses: cypress-io/github-action@v2
         with:
@@ -53,10 +49,3 @@ jobs:
         with:
           name: cypress-videos
           path: cypress/videos
-  vitest:
-    runs-on: ubuntu-latest
-    name: Vitest
-    needs: setup
-    steps:
-      - name: Run unit tests
-        run: npm run vitest run
