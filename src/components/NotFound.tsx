@@ -1,5 +1,5 @@
 import { Trans } from '@lingui/macro';
-import { Flex, Heading } from 'theme-ui';
+import { Flex, Heading } from '@theme-ui/components';
 
 export const NotFound = () => (
   <Flex

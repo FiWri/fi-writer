@@ -1,9 +1,10 @@
 import { i18n } from '@lingui/core';
 import { I18nProvider } from '@lingui/react';
+import { ColorModeProvider } from '@theme-ui/color-modes';
+import { Box } from '@theme-ui/components';
+import { ThemeProvider } from '@theme-ui/core';
 import { de, en, fr } from 'make-plural/plurals';
 import { FC } from 'react';
-import { ModalProvider } from 'styled-react-modal';
-import { Box, ThemeProvider } from 'theme-ui';
 
 import { useTheme } from '~/hooks';
 import { deMessages, enMessages, frMessages, Locales } from '~/locales';
@@ -37,11 +38,11 @@ export const App = () => {
   return (
     <I18nProvider i18n={i18n}>
       <ThemeProvider theme={theme}>
-        <AppWrapper>
-          <ModalProvider>
+        <ColorModeProvider>
+          <AppWrapper>
             <Router />
-          </ModalProvider>
-        </AppWrapper>
+          </AppWrapper>
+        </ColorModeProvider>
       </ThemeProvider>
     </I18nProvider>
   );

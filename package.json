@@ -12,22 +12,25 @@
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
     "preview": "vite preview",
     "serve": "vite preview",
-    "serve-https": "serve dist"
+    "serve-https": "serve dist",
+    "test": "vitest"
   },
   "dependencies": {
     "@emotion/css": "^11.9.0",
     "@emotion/react": "^11.9.0",
     "@mdx-js/react": "^2.1.1",
     "@projectstorm/react-diagrams": "^6.7.0",
+    "@theme-ui/color-modes": "^0.14.5",
+    "@theme-ui/components": "^0.14.5",
+    "@theme-ui/core": "^0.14.5",
+    "@theme-ui/css": "^0.14.5",
     "@theme-ui/presets": "^0.14.2",
     "@tiptap/react": "^2.0.0-beta.108",
     "@tiptap/starter-kit": "^2.0.0-beta.183",
     "jotai": "^1.6.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-router-dom": "^6.3.0",
-    "styled-react-modal": "^3.0.0",
-    "theme-ui": "^0.14.2"
+    "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
@@ -36,14 +39,16 @@
     "@lingui/cli": "^3.13.2",
     "@lingui/core": "^3.13.2",
     "@lingui/macro": "^3.13.2",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^12.1.5",
+    "@testing-library/react-hooks": "^8.0.0",
+    "@testing-library/user-event": "^14.1.1",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
-    "@types/styled-react-modal": "^1.2.2",
     "@typescript-eslint/eslint-plugin": "^5.18.0",
     "@typescript-eslint/parser": "^5.20.0",
     "@vitejs/plugin-react": "^1.0.7",
     "babel-plugin-macros": "^3.1.0",
-    "barrelsby": "^2.3.3",
     "eslint": "^8.13.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-import-resolver-typescript": "^2.7.1",
@@ -51,16 +56,12 @@
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
     "https-localhost": "^4.7.1",
-    "jest": "^27.5.1",
+    "jsdom": "^19.0.0",
     "make-plural": "^7.1.0",
     "prettier": "^2.6.2",
-    "sass": "^1.50.0",
     "typescript": "^4.5.4",
     "vite": "^2.9.0",
-    "vite-plugin-pwa": "^0.11.13"
-  },
-  "volta": {
-    "node": "16.14.2",
-    "npm": "8.6.0"
+    "vite-plugin-pwa": "^0.11.13",
+    "vitest": "^0.10.5"
   }
 }

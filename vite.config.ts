@@ -1,3 +1,5 @@
+/// <reference types="vitest" />
+
 import * as path from 'path';
 
 import react from '@vitejs/plugin-react';
@@ -8,7 +10,7 @@ import { VitePWA } from 'vite-plugin-pwa';
 export default defineConfig({
   esbuild: {
     jsxFactory: 'jsx',
-    jsxInject: `import { jsx } from 'theme-ui'`,
+    jsxInject: `import { jsx } from '@theme-ui/core'`,
   },
   server: {
     port: 3001,
@@ -57,6 +59,11 @@ export default defineConfig({
       },
     }),
   ],
+  test: {
+    environment: 'jsdom',
+    globals: true,
+    setupFiles: './src/utils/test-setup.ts',
+  },
   resolve: {
     alias: {
       '~': path.resolve(__dirname, 'src'),

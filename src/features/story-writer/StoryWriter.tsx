@@ -1,4 +1,4 @@
-import { Container } from 'theme-ui';
+import { Container } from '@theme-ui/components';
 
 import { Tiptap } from './components/Tiptap';
 

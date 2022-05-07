@@ -1,4 +1,4 @@
-import { useColorMode } from 'theme-ui';
+import { useColorMode } from '@theme-ui/color-modes';
 
 export const useColor = () => {
   const [colorMode, setColorMode] = useColorMode();

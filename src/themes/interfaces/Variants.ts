@@ -1,4 +1,4 @@
-import { Theme, ThemeUICSSObject } from 'theme-ui';
+import { Theme, ThemeUICSSObject } from '@theme-ui/core';
 
 export type Variants = Pick<
   Theme,

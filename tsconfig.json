@@ -22,6 +22,7 @@
     // * And library accepts only PortModel
     "strictNullChecks": true,
     "target": "ESNext",
+    "types": ["vitest/globals"],
     "useDefineForClassFields": true,
   },
   "include": ["src"],

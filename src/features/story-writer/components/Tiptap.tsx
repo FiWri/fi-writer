@@ -1,13 +1,9 @@
 import { css as createClassName } from '@emotion/css';
+import { Box, Button, Flex } from '@theme-ui/components';
+import { useThemeUI } from '@theme-ui/core';
+import { css as transformStyleObject } from '@theme-ui/css';
 import { Editor, EditorContent, useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
-import {
-  Box,
-  Button,
-  css as transformStyleObject,
-  Flex,
-  useThemeUI,
-} from 'theme-ui';
 
 const MenuBar = ({ editor }: { editor: Editor | null }) => {
   if (!editor) {
