@@ -3,7 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "npm run clean && tsc && vite build",
+    "clean": "rm -rf dist/",
     "cy": "start-server-and-test dev http-get://localhost:3001 'cypress run'",
     "cy:ui": "start-server-and-test dev http-get://localhost:3001 'cypress open'",
     "dev": "vite",
@@ -16,7 +17,7 @@
     "prettier": "prettier \"src/**/*.{js,jsx,ts,tsx}\" --write",
     "preview": "vite preview",
     "serve": "vite build && vite preview",
-    "serve-https": "serve dist",
+    "serve-https": "npm run serve dist/",
     "test": "npm run vitest && npm run cy",
     "vitest": "vitest run"
   },
@@ -53,6 +54,7 @@
     "@types/react-dom": "^17.0.10",
     "@typescript-eslint/eslint-plugin": "^5.18.0",
     "@typescript-eslint/parser": "^5.20.0",
+    "@vitejs/plugin-legacy": "^1.8.2",
     "@vitejs/plugin-react": "^1.0.7",
     "babel-plugin-macros": "^3.1.0",
     "cypress": "^9.6.0",

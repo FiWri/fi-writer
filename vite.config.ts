@@ -1,5 +1,4 @@
 /// <reference types="vitest" />
-
 import * as path from 'path';
 
 import react from '@vitejs/plugin-react';
@@ -27,10 +26,10 @@ export default defineConfig({
     // Declare icons for the PWA
     VitePWA({
       includeAssets: [
-        '/icons/favicon.png',
-        '/icons/favicon.ico',
+        'icons/favicon.png',
+        'icons/favicon.ico',
         'robots.txt',
-        '/icons/apple-touch-icon.png',
+        'icons/apple-touch-icon.png',
       ],
       manifest: {
         name: 'Fi-Writer',
@@ -40,7 +39,7 @@ export default defineConfig({
         theme_color: '#fff2d6',
         icons: [
           {
-            src: 'pwa-192x192.png',
+            src: 'icons/pwa-192x192.png',
             sizes: '192x192',
             type: 'image/png',
           },
