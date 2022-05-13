@@ -14,10 +14,9 @@
     "i18n:compile": "lingui compile --strict --typescript",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\" --fix",
     "prepare": "husky install",
-    "prettier": "prettier \"src/**/*.{js,jsx,ts,tsx}\" --write",
     "preview": "vite preview",
     "serve": "vite build && vite preview",
-    "serve-https": "npm run serve dist/",
+    "serve-https": "npm run serve dist",
     "test": "npm run vitest && npm run cy",
     "vitest": "vitest run"
   },
