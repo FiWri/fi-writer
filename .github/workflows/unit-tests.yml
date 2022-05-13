@@ -2,24 +2,32 @@
 # It includes NPM installation, custom caching and lots of configuration options.
 # It will also record videos and store the ones from failures as Artifacts in the repository
 name: Unit Tests
+
 on:
   push:
     branches: [trunk]
   pull_request:
     branches: [trunk]
+
 jobs:
+
   vitest:
     runs-on: ubuntu-latest
     name: Vitest
+    timeout-minutes: 10
     steps:
+
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Install Node
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
           cache: 'npm'
+
       - name: Install packages
         run: npm ci
+
       - name: Run unit tests
         run: npm run vitest run

@@ -2,32 +2,51 @@
 # It includes NPM installation, custom caching and lots of configuration options.
 # It will also record videos and store the ones from failures as Artifacts in the repository
 name: E2E Tests
+
 on:
   push:
     branches: [trunk]
   pull_request:
     branches: [trunk]
+
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
     name: Cypress with artifacts
+    timeout-minutes: 10
     steps:
       # install NPM dependencies, cache them correctly
+
       - name: Checkout
         uses: actions/checkout@v3
+
       - name: Install Node
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
           cache: 'npm'
+
       - name: Install packages
         run: npm ci
+
       - name: Run tests with dev server
         uses: cypress-io/github-action@v2
         with:
           start: npm run dev
           wait-on: 'http://localhost:3001'
           wait-on-timeout: 120
+        env:
+          # pass the Dashboard record key as an environment variable
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          # pass GitHub token to allow accurately detecting a build vs a re-run build
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # pass the project ID from the secrets through environment variable
+          CYPRESS_PROJECT_ID: ${{ secrets.PROJECT_ID }}
+          # - if the event is push, the title will be undefined and Cypress will get the commit message from Git information
+          # - if the event is pull_request, then we set the commit message to the pull request title
+          COMMIT_INFO_MESSAGE: ${{ github.event.pull_request.title }}
+          COMMIT_INFO_SHA: ${{ github.event.pull_request.head.sha }}
+
       # after the test run completes
       # store videos and any screenshots
       # NOTE: screenshots will be generated only if E2E test failed
@@ -43,7 +62,7 @@ jobs:
       # Test run video was always captured, so this action uses "always()" condition
       - name: Upload videos on test failures
         uses: actions/upload-artifact@v2
-        if: always()
+        if: failure()
         with:
           name: cypress-videos
           path: cypress/videos
