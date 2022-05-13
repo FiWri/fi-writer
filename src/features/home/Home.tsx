@@ -8,6 +8,7 @@ import { useColor, useLocale, useTheme } from '~/hooks';
 import { routes } from '~/Router';
 
 import logo from './images/fiwri.png';
+import { useModalContext } from './../../contexts/modalContext';
 
 const rotate = keyframes({
   from: { transform: 'scale(0.98)' },
@@ -19,6 +20,7 @@ export const Home = () => {
   const { switchTheme } = useTheme();
   const { switchColorMode } = useColor();
   const { switchLocale } = useLocale();
+  const { openModal } = useModalContext();
 
   return (
     <Flex
@@ -73,6 +75,9 @@ export const Home = () => {
           onClick={() => switchColorMode()}
         >
           <Trans>switch color mode</Trans>
+        </Button>
+        <Button type="button" onClick={() => openModal()}>
+          <Trans>open modal</Trans>
         </Button>
       </Flex>
       <Link
