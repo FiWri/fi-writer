@@ -6,6 +6,7 @@ import { Link as NavLink } from 'react-router-dom';
 import { useColor, useLocale, useTheme } from '~/hooks';
 import { routes } from '~/Router';
 
+import { useModalContext } from './../../contexts/modalContext';
 import logo from './fiwri.png';
 
 const rotate = keyframes({
@@ -18,6 +19,7 @@ export const Home = () => {
   const { switchTheme } = useTheme();
   const { switchColorMode } = useColor();
   const { switchLocale } = useLocale();
+  const { openModal } = useModalContext();
 
   return (
     <Flex
@@ -72,6 +74,9 @@ export const Home = () => {
           onClick={() => switchColorMode()}
         >
           <Trans>switch color mode</Trans>
+        </Button>
+        <Button type="button" onClick={() => openModal()}>
+          <Trans>open modal</Trans>
         </Button>
       </Flex>
       <Text>

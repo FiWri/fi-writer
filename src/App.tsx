@@ -6,8 +6,9 @@ import { ThemeProvider } from '@theme-ui/core';
 import { de, en, fr } from 'make-plural/plurals';
 import { FC } from 'react';
 
+import { ModalProvider } from '~/contexts/modalContext';
 import { useTheme } from '~/hooks';
-import { deMessages, enMessages, frMessages, FiwriLocales } from '~/locales';
+import { deMessages, enMessages, FiwriLocales, frMessages } from '~/locales';
 import { Router } from '~/Router';
 
 const AppWrapper: FC = (props) => (
@@ -39,9 +40,11 @@ export const App = () => {
     <I18nProvider i18n={i18n}>
       <ThemeProvider theme={theme}>
         <ColorModeProvider>
-          <AppWrapper>
-            <Router />
-          </AppWrapper>
+          <ModalProvider>
+            <AppWrapper>
+              <Router />
+            </AppWrapper>
+          </ModalProvider>
         </ColorModeProvider>
       </ThemeProvider>
     </I18nProvider>
