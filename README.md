@@ -20,16 +20,8 @@ Fi-Writer is an interactive fiction writer made as a [Progressive Web Applicatio
 
 ## Running the application
 
-You can run the development server very simply by running `npm run dev`.
-
-⚠️ If you want to try to build the application and run it in prod, you need to create a `.pem` certificate and provide it to the https server. ⚠️
-Steps:
-
-1. `brew install mkcert`: install mkcert tool - macOS; you can see the mkcert repo for details
-2. `brew install nss`: install nss (only needed if you use Firefox)
-3. `mkcert -install`: Setup mkcert on your machine (creates a CA)
-4. `npm run cert` ⚠ ️ at the root of the application: generate the application's certificate
-5. `npm run serve`: start the build and the production server
+You can run the development server by running `npm run dev`.
+You can build and run the production https server by running `npm run serve`.
 
 ## Architecture
 
