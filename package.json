@@ -5,6 +5,7 @@
   "scripts": {
     "build": "npm run clean && tsc && vite build",
     "clean": "rm -rf dist/",
+    "cert": "rm -rf .cert && mkdir -p .cert && mkcert -key-file ./.cert/key.pem -cert-file ./.cert/cert.pem 'localhost'",
     "cy": "start-server-and-test dev http-get://localhost:3001 'cypress run'",
     "cy:ui": "start-server-and-test dev http-get://localhost:3001 'cypress open'",
     "dev": "vite",
@@ -16,15 +17,11 @@
     "prepare": "husky install",
     "preview": "vite preview",
     "serve": "vite build && vite preview",
-    "serve-https": "npm run serve dist",
     "test": "npm run vitest && npm run cy",
     "vitest": "vitest run"
   },
   "dependencies": {
     "@emotion/css": "^11.9.0",
-    "@emotion/react": "^11.9.0",
-    "@mdx-js/react": "^2.1.1",
-    "@projectstorm/react-diagrams": "^6.7.0",
     "@theme-ui/color-modes": "^0.14.5",
     "@theme-ui/components": "^0.14.5",
     "@theme-ui/core": "^0.14.5",
@@ -35,6 +32,7 @@
     "jotai": "^1.6.3",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-icons": "^4.3.1",
     "react-router-dom": "^6.3.0"
   },
   "devDependencies": {
@@ -53,7 +51,6 @@
     "@types/react-dom": "^17.0.10",
     "@typescript-eslint/eslint-plugin": "^5.18.0",
     "@typescript-eslint/parser": "^5.20.0",
-    "@vitejs/plugin-legacy": "^1.8.2",
     "@vitejs/plugin-react": "^1.0.7",
     "babel-plugin-macros": "^3.1.0",
     "cypress": "^9.6.0",

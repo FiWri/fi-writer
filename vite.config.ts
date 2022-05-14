@@ -1,4 +1,5 @@
 /// <reference types="vitest" />
+import * as fs from 'fs';
 import * as path from 'path';
 
 import react from '@vitejs/plugin-react';
@@ -13,14 +14,18 @@ export default defineConfig({
   },
   server: {
     port: 3001,
+    https: {
+      key: fs.readFileSync('./.cert/key.pem'),
+      cert: fs.readFileSync('./.cert/cert.pem'),
+    },
   },
   plugins: [
     react({
       babel: {
-        // Use .babelrc files, necessary to use LinguiJS CLI
-        babelrc: true,
-        // Use babel.config.js files
-        configFile: false,
+        // Use .babelrc config file
+        babelrc: false,
+        // Use babel.config.js config files, necessary to use LinguiJS CLI
+        configFile: true,
       },
     }),
     // Declare icons for the PWA
