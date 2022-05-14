@@ -6,6 +6,7 @@
     "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "jsx": "react-jsx",
+    "jsxImportSource": "@theme-ui/core",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "esModuleInterop": false,
     "module": "ESNext",

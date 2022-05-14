@@ -1,6 +1,7 @@
 import { keyframes } from '@emotion/react';
 import { Trans } from '@lingui/macro';
 import { Button, Flex, Heading, Image, Link, Text } from '@theme-ui/components';
+import { FaGithub } from 'react-icons/fa';
 import { Link as NavLink } from 'react-router-dom';
 
 import { useColor, useLocale, useTheme } from '~/hooks';
@@ -15,7 +16,7 @@ const rotate = keyframes({
 });
 
 export const Home = () => {
-  const { switchTheme } = useTheme();
+  const { switchTheme, theme } = useTheme();
   const { switchColorMode } = useColor();
   const { switchLocale } = useLocale();
 
@@ -74,16 +75,16 @@ export const Home = () => {
           <Trans>switch color mode</Trans>
         </Button>
       </Flex>
-      <Text>
-        <Link
-          className="Root-link"
-          href="https://github.com/FiWri/fi-writer"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Trans>Github</Trans>
-        </Link>
-      </Text>
+      <Link
+        className="Root-link"
+        href="https://github.com/FiWri/fi-writer"
+        target="_blank"
+        role="button"
+        rel="noopener noreferrer"
+        sx={{ color: 'text' }} // the SVG icon will use the parent's color
+      >
+        <FaGithub size="3em" />
+      </Link>
     </Flex>
   );
 };

@@ -21,7 +21,7 @@ msgstr ""
 msgid "FiWri"
 msgstr "FiWri"
 
-#: src/features/home/Home.tsx:80
+#: src/features/home/Home.tsx:84
 msgid "Github"
 msgstr "Github"
 
@@ -29,14 +29,14 @@ msgstr "Github"
 msgid "home.app-description"
 msgstr ""
 
-#: src/features/home/Home.tsx:70
+#: src/features/home/Home.tsx:74
 msgid "switch color mode"
 msgstr "Changer de mode jour/nuit"
 
-#: src/features/home/Home.tsx:60
+#: src/features/home/Home.tsx:64
 msgid "switch language"
 msgstr "Changer la langue"
 
-#: src/features/home/Home.tsx:63
+#: src/features/home/Home.tsx:67
 msgid "switch theme"
 msgstr "Changer de thème"

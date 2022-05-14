@@ -17,10 +17,10 @@ export default defineConfig({
   plugins: [
     react({
       babel: {
-        // Use .babelrc files, necessary to use LinguiJS CLI
-        babelrc: true,
-        // Use babel.config.js files
-        configFile: false,
+        // Use .babelrc config file
+        babelrc: false,
+        // Use babel.config.js config files, necessary to use LinguiJS CLI
+        configFile: true,
       },
     }),
     // Declare icons for the PWA
