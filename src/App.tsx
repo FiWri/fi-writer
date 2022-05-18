@@ -7,8 +7,9 @@ import { de, en, fr } from 'make-plural/plurals';
 import { FC } from 'react';
 
 import { useTheme } from '~/hooks';
-import { deMessages, enMessages, frMessages, FiwriLocales } from '~/locales';
+import { deMessages, enMessages, FiwriLocales, frMessages } from '~/locales';
 import { Router } from '~/Router';
+import { useServiceWorkerPrompt } from '~/service-workers/useServiceWorkerPrompt';
 
 const AppWrapper: FC = (props) => (
   <Box
@@ -22,6 +23,7 @@ const AppWrapper: FC = (props) => (
 );
 export const App = () => {
   const { theme } = useTheme();
+  useServiceWorkerPrompt();
 
   i18n.loadLocaleData({
     de: { plurals: de },
