@@ -6,7 +6,7 @@ import { useRegisterSW } from 'virtual:pwa-register/react';
 
 export function useServiceWorkerPrompt() {
   // replaced dynamically
-  const buildDate = '__DATE__';
+  const buildDate = '__LAST_UPDATE__';
   // replaced dyanmicaly
   const reloadSW = '__RELOAD_SW__';
 
@@ -60,8 +60,10 @@ export function useServiceWorkerPrompt() {
     toast(
       (t) => (
         <Flex sx={{ flexDirection: 'column' }}>
-          <Text>New content available, click on reload button to update.</Text>
-          <Text>{buildDate}</Text>
+          <Heading>
+            New content available, click on reload button to update.
+          </Heading>
+          <Text>Last update on: {buildDate}</Text>
           <Flex>
             <Button onClick={() => toast.dismiss(t.id)}>Dismiss</Button>
             <Button onClick={() => reloadAndDismiss(t.id)}>Reload</Button>

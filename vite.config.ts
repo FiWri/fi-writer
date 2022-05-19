@@ -18,9 +18,9 @@ const pwaOptions: Partial<VitePWAOptions> = {
   ],
   manifest: {
     name: 'Fi-Writer',
-    short_name: 'Fi-Writer, an open source interactive fiction writer',
+    short_name: 'Fi-Writer',
     description:
-      'Fi-Writer is an opensource writer for interactive fiction using Twin format',
+      'Fi-Writer is an opensource writer for interactive fiction using Twine format',
     theme_color: '#fff2d6',
     icons: [
       {
@@ -50,15 +50,18 @@ const pwaOptions: Partial<VitePWAOptions> = {
 };
 
 if (process.env.SW === 'true') {
-  pwaOptions.srcDir = 'src';
+  pwaOptions.srcDir = 'src/service-workers';
+  pwaOptions.filename = 'service-worker.ts';
   pwaOptions.strategies = 'injectManifest';
   (pwaOptions.manifest as Partial<ManifestOptions>).name =
-    'FiWri PWA Inject Manifest';
-  (pwaOptions.manifest as Partial<ManifestOptions>).short_name =
-    'FiWri PWA Inject';
+    'Fi-Writer Injected Manifest';
 }
 
-const replaceOptions = { __DATE__: new Date().toISOString() };
+const replaceOptions = {
+  preventAssignment: true,
+  __LAST_UPDATE__: new Date().toISOString(),
+};
+
 const reload = process.env.RELOAD_SW === 'true';
 if (reload) {
   // @ts-expect-error just ignore
@@ -69,7 +72,7 @@ if (reload) {
 export default defineConfig({
   build: {
     rollupOptions: {
-      plugins: [analyze()],
+      plugins: [analyze({ summaryOnly: true })],
     },
     sourcemap: process.env.SOURCE_MAP === 'true',
   },
