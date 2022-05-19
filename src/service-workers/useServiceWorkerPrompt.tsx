@@ -1,5 +1,5 @@
 // disabling eslint since I can't solve the module import even with https://github.com/antfu/vite-plugin-pwa/issues/113 or https://github.com/antfu/vite-plugin-pwa/issues/210
-import { Button, Flex, Text } from '@theme-ui/components';
+import { Button, Flex, Heading, Text } from '@theme-ui/components';
 import { toast } from 'react-hot-toast';
 // eslint-disable-next-line import/no-unresolved
 import { useRegisterSW } from 'virtual:pwa-register/react';
@@ -47,8 +47,8 @@ export function useServiceWorkerPrompt() {
   const showOfflineReadyToast = () => {
     toast(
       (t) => (
-        <Flex sx={{ flexDirection: 'column' }}>
-          <Text>App ready to work offline</Text>
+        <Flex sx={{ flexDirection: 'column', minWidth: '20vw' }}>
+          <Heading>App ready to work offline</Heading>
           <Button onClick={() => toast.dismiss(t.id)}>Dismiss</Button>
         </Flex>
       ),

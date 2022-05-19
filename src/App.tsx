@@ -5,6 +5,7 @@ import { Box } from '@theme-ui/components';
 import { ThemeProvider } from '@theme-ui/core';
 import { de, en, fr } from 'make-plural/plurals';
 import { FC } from 'react';
+import { Toaster } from 'react-hot-toast';
 
 import { useTheme } from '~/hooks';
 import { deMessages, enMessages, FiwriLocales, frMessages } from '~/locales';
@@ -43,6 +44,7 @@ export const App = () => {
         <ColorModeProvider>
           <AppWrapper>
             <Router />
+            <Toaster />
           </AppWrapper>
         </ColorModeProvider>
       </ThemeProvider>

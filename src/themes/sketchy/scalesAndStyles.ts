@@ -76,6 +76,8 @@ export const scalesAndStyles: ScalesAndStyles = makeTheme({
     root: {
       fontFamily: 'body',
       lineHeight: 'body',
+      margin: '0',
+      padding: '0',
     },
     a: {
       color: 'primary',
