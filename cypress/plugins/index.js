@@ -1,5 +1,7 @@
 /// <reference types="cypress" />
 
+import { promises as fsPromises } from 'fs';
+
 const path = require('path');
 
 const { startDevServer } = require('@cypress/vite-dev-server');
