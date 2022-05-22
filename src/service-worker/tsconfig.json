@@ -1,0 +1,7 @@
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "lib": ["WebWorker", "ESNext"],
+  },
+  "files": ["./sw.ts", "./hooks/useServiceWorkerPrompt.tsx"],
+}

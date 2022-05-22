@@ -1,6 +1,10 @@
-const path = require('path')
+/// <reference types="cypress" />
 
-const { startDevServer } = require('@cypress/vite-dev-server')/// <reference types="cypress" />
+import { promises as fsPromises } from 'fs';
+
+const path = require('path');
+
+const { startDevServer } = require('@cypress/vite-dev-server');
 
 // ***********************************************************
 // This example plugins/index.js can be used to load plugins
@@ -28,6 +32,6 @@ module.exports = (on, config) => {
       viteConfig: {
         configFile: path.resolve(__dirname, '..', '..', 'vite.config.ts'),
       },
-    })
-  })
-}
+    });
+  });
+};

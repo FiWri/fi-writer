@@ -1,9 +1,11 @@
 import { css as createClassName } from '@emotion/css';
-import { Box, Button, Flex } from '@theme-ui/components';
+import { Box, Button, Flex, Image } from '@theme-ui/components';
 import { useThemeUI } from '@theme-ui/core';
 import { css as transformStyleObject } from '@theme-ui/css';
 import { Editor, EditorContent, useEditor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
+
+import logo from '../images/fiwri-outline.png';
 
 const MenuBar = ({ editor }: { editor: Editor | null }) => {
   if (!editor) {
@@ -180,6 +182,15 @@ export const Tiptap = () => {
     <Box className="tiptap">
       <MenuBar editor={editor} />
       <EditorContent className="editor-content" editor={editor} />
+      <Image
+        src={logo}
+        className="fiwri-logo"
+        alt="logo"
+        sx={{
+          height: '40vmin',
+          pointerEvents: 'none',
+        }}
+      />
     </Box>
   );
 };

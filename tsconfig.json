@@ -16,17 +16,14 @@
       "~/*": ["./src/*"],
     },
     "resolveJsonModule": true,
-    // * Skip lib checking for react diagrams because of errors
     "skipLibCheck": true,
     "strict": true,
-    // * Must had strict null checks to false because our brick return PortModel | null
-    // * And library accepts only PortModel
-    "strictNullChecks": true,
     "target": "ESNext",
-    "types": ["vitest/globals"],
+    "types": ["vite-plugin-pwa/client", "vitest/globals"],
     "useDefineForClassFields": true,
   },
-  "include": ["src"],
+  "include": ["./src"],
+  "exclude": ["./src/service-worker"],
   "references": [{
     "path": "./tsconfig.node.json"
   }]

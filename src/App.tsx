@@ -1,16 +1,17 @@
 import { i18n } from '@lingui/core';
 import { I18nProvider } from '@lingui/react';
 import { ColorModeProvider } from '@theme-ui/color-modes';
-import { Box } from '@theme-ui/components';
+import { Box, BoxProps } from '@theme-ui/components';
 import { ThemeProvider } from '@theme-ui/core';
 import { de, en, fr } from 'make-plural/plurals';
-import { FC } from 'react';
+import { Toaster } from 'react-hot-toast';
 
 import { useTheme } from '~/hooks';
-import { deMessages, enMessages, frMessages, FiwriLocales } from '~/locales';
+import { deMessages, enMessages, FiwriLocales, frMessages } from '~/locales';
 import { Router } from '~/Router';
+import { useServiceWorkerPrompt } from '~/service-worker';
 
-const AppWrapper: FC = (props) => (
+const AppWrapper = (props: BoxProps) => (
   <Box
     sx={{
       width: '100vw',
@@ -22,6 +23,7 @@ const AppWrapper: FC = (props) => (
 );
 export const App = () => {
   const { theme } = useTheme();
+  useServiceWorkerPrompt();
 
   i18n.loadLocaleData({
     de: { plurals: de },
@@ -41,6 +43,7 @@ export const App = () => {
         <ColorModeProvider>
           <AppWrapper>
             <Router />
+            <Toaster />
           </AppWrapper>
         </ColorModeProvider>
       </ThemeProvider>
