@@ -25,4 +25,5 @@ node_modules
 *.sln
 *.sw?
 
-# Project
+# Cypress
+cypress/videos
