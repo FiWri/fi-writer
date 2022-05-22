@@ -3,5 +3,5 @@
   "compilerOptions": {
     "lib": ["WebWorker", "ESNext"],
   },
-  "files": ["./useServiceWorkerPrompt.tsx", "./service-worker.ts"],
+  "files": ["./sw.ts", "./hooks/useServiceWorkerPrompt.tsx"],
 }

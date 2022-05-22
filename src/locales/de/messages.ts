@@ -8,4 +8,10 @@
   'switch color mode': 'Farbmodus wechseln',
   'switch language': 'Sprache wechseln',
   'switch theme': 'Wechselthema',
+  'webworker.offline-toast.heading': 'App ready to work offline',
+  'webworker.refresh-toast.heading':
+    'New content available, click on reload button to update.',
+  'webworker.refresh-toast.last-update': ['Last update on: ', ['lastUpdate']],
+  'webworker.refresh-toast.reload': 'Reload',
+  'webworker.toast.dismiss': 'Dismiss',
 };

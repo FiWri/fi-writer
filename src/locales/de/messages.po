@@ -17,26 +17,43 @@ msgstr ""
 msgid "404-not-found"
 msgstr ""
 
-#: src/features/home/Home.tsx:43
+#: src/features/home/Home.tsx:44
 msgid "FiWri"
 msgstr "FiWri"
 
-#: src/features/home/Home.tsx:84
-msgid "Github"
-msgstr "Github"
-
-#: src/features/home/Home.tsx:46
+#: src/features/home/Home.tsx:47
 msgid "home.app-description"
 msgstr ""
 
-#: src/features/home/Home.tsx:74
+#: src/features/home/Home.tsx:75
 msgid "switch color mode"
 msgstr "Farbmodus wechseln"
 
-#: src/features/home/Home.tsx:64
+#: src/features/home/Home.tsx:65
 msgid "switch language"
 msgstr "Sprache wechseln"
 
-#: src/features/home/Home.tsx:67
+#: src/features/home/Home.tsx:68
 msgid "switch theme"
 msgstr "Wechselthema"
+
+#: src/service-worker/components/OfflineReadyToast.tsx:12
+msgid "webworker.offline-toast.heading"
+msgstr ""
+
+#: src/service-worker/components/RefreshToast.tsx:18
+msgid "webworker.refresh-toast.heading"
+msgstr ""
+
+#: src/service-worker/components/RefreshToast.tsx:23
+msgid "webworker.refresh-toast.last-update"
+msgstr ""
+
+#: src/service-worker/components/RefreshToast.tsx:32
+msgid "webworker.refresh-toast.reload"
+msgstr ""
+
+#: src/service-worker/components/OfflineReadyToast.tsx:17
+#: src/service-worker/components/RefreshToast.tsx:29
+msgid "webworker.toast.dismiss"
+msgstr ""

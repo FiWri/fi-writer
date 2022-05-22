@@ -7,15 +7,12 @@ import analyze from 'rollup-plugin-analyzer';
 import { defineConfig } from 'vite';
 import { ManifestOptions, VitePWA, VitePWAOptions } from 'vite-plugin-pwa';
 
+// By default, VitePWA will generate a service worker in dev mode using the `generateSW` strategy
+// The generated worker will be generated in `{root}/dev-dist`
 const pwaOptions: Partial<VitePWAOptions> = {
-  mode: 'development',
   base: '/',
-  includeAssets: [
-    'icons/favicon.png',
-    'icons/favicon.ico',
-    'robots.txt',
-    'icons/apple-touch-icon.png',
-  ],
+  includeAssets: ['icons/*.png', 'icons/*.ico', 'robots.txt'],
+
   manifest: {
     name: 'Fi-Writer',
     short_name: 'Fi-Writer',
@@ -41,20 +38,40 @@ const pwaOptions: Partial<VitePWAOptions> = {
       },
     ],
   },
-  devOptions: {
-    enabled: process.env.SW_DEV === 'true',
-    /* when using generateSW the PWA plugin will switch to classic */
-    type: 'module',
-    navigateFallback: 'index.html',
-  },
 };
 
+// In production, use `generateSW` to automatically generate a service worker in `dev-dist/`
+if (process.env.SW_DEV === 'true') {
+  pwaOptions.devOptions = {
+    enabled: true,
+    navigateFallback: 'index.html',
+    /* when using generateSW the PWA plugin will switch to classic */
+    type: 'module',
+  };
+  pwaOptions.workbox = {
+    // We need to include assets from the src folders to pre-cache them
+    globPatterns: [
+      '**/*.html',
+      '../src/**/*.css',
+      '../src/**/*.js',
+      '../src/**/*.png',
+      '../src/**/*.svg',
+    ],
+    maximumFileSizeToCacheInBytes: 3000000,
+  };
+}
+
+// In production, use the custom service worker in `{root}/src/service-worker
 if (process.env.SW === 'true') {
-  pwaOptions.srcDir = 'src/service-workers';
-  pwaOptions.filename = 'service-worker.ts';
+  pwaOptions.srcDir = 'src/service-worker';
+  pwaOptions.filename = 'sw.ts';
   pwaOptions.strategies = 'injectManifest';
   (pwaOptions.manifest as Partial<ManifestOptions>).name =
     'Fi-Writer Injected Manifest';
+  pwaOptions.injectManifest = {
+    globPatterns: ['**/*.css', '**/*.html', '**/*.js', '**/*.png', '**/*.svg'],
+    maximumFileSizeToCacheInBytes: 3000000,
+  };
 }
 
 const replaceOptions = {
@@ -62,8 +79,7 @@ const replaceOptions = {
   __LAST_UPDATE__: new Date().toISOString(),
 };
 
-const reload = process.env.RELOAD_SW === 'true';
-if (reload) {
+if (process.env.RELOAD_SW === 'true') {
   // @ts-expect-error just ignore
   replaceOptions.__RELOAD_SW__ = 'true';
 }

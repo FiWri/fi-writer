@@ -9,7 +9,7 @@ import { Toaster } from 'react-hot-toast';
 import { useTheme } from '~/hooks';
 import { deMessages, enMessages, FiwriLocales, frMessages } from '~/locales';
 import { Router } from '~/Router';
-import { useServiceWorkerPrompt } from '~/service-workers/useServiceWorkerPrompt';
+import { useServiceWorkerPrompt } from '~/service-worker';
 
 const AppWrapper = (props: BoxProps) => (
   <Box

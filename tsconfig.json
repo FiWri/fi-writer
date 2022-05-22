@@ -23,7 +23,7 @@
     "useDefineForClassFields": true,
   },
   "include": ["./src"],
-  "exclude": ["./src/service-workers"],
+  "exclude": ["./src/service-worker"],
   "references": [{
     "path": "./tsconfig.node.json"
   }]
