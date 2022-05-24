@@ -66,8 +66,6 @@ if (process.env.SW === 'true') {
   pwaOptions.srcDir = 'src/service-worker';
   pwaOptions.filename = 'sw.ts';
   pwaOptions.strategies = 'injectManifest';
-  (pwaOptions.manifest as Partial<ManifestOptions>).name =
-    'Fi-Writer Injected Manifest';
   pwaOptions.injectManifest = {
     globPatterns: ['**/*.css', '**/*.html', '**/*.js', '**/*.png', '**/*.svg'],
     maximumFileSizeToCacheInBytes: 3000000,
