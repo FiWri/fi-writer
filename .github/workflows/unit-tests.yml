@@ -24,10 +24,14 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
-          cache: 'npm'
+          cache: 'pnpm'
 
-      - name: Install packages
-        run: npm ci
+      - name: Install pnpm and packages
+        uses: pnpm/action-setup@v2.0.1
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: true
 
       - name: Run unit tests
-        run: npm run vitest run
+        run: pnpm vitest run
