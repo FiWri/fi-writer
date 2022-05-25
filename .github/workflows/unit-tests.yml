@@ -9,9 +9,6 @@ on:
   pull_request:
     branches: [trunk]
 
-env:
-  CYPRESS_CACHE_FOLDER: '~/.cache/Cypress'
-
 jobs:
   vitest:
     runs-on: ubuntu-latest
@@ -36,14 +33,6 @@ jobs:
 
       - name: Install packages
         run: pnpm install
-
-      - name: Cache Cypress binary
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/Cypress
-          key: cypress-${{ runner.os }}-cypress-${{ hashFiles('**/pnpm-lock.json') }}
-          restore-keys: |
-            cypress-${{ runner.os }}-cypress-
 
       - name: Run unit tests
         run: pnpm vitest run
