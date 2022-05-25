@@ -34,7 +34,7 @@ jobs:
           cache: 'pnpm'
 
       - name: Install packages
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
 
       - name: Install Cypress binary
         run: pnpm cypress install
