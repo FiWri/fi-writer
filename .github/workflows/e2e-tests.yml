@@ -39,6 +39,9 @@ jobs:
       - name: Run tests with dev server
         uses: cypress-io/github-action@v2
         with:
+          # we have already installed all dependencies above and cypress looks for package-lock.json
+          # see https://github.com/cypress-io/github-action/issues/145
+          install: false
           start: pnpm dev
           wait-on: 'http://localhost:3001'
           wait-on-timeout: 120
