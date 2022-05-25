@@ -23,8 +23,10 @@ jobs:
       - name: Cache Cypress binary
         uses: actions/cache@v3
         with:
-          path: ~/.cache
-          key: ${{ runner.os }}-cypress
+          path: ~/.cache/Cypress
+          key: cypress-${{ runner.os }}-cypress-${{ hashFiles('**/pnpm-lock.json') }
+          restore-keys: |
+            cypress-${{ runner.os }}-cypress-
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2.0.1
