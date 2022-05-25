@@ -23,7 +23,7 @@ jobs:
       - name: Install Node
         uses: actions/setup-node@v3
         with:
-          node-version: 'lts/*'
+          node-version: '18.x'
           cache: 'pnpm'
 
       - name: Install packages

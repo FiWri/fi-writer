@@ -41,7 +41,7 @@
     "@babel/core": "^7.18.0",
     "@babel/preset-react": "^7.17.12",
     "@babel/preset-typescript": "^7.17.12",
-    "@cypress/vite-dev-server": "2.2.3",
+    "@cypress/vite-dev-server": "2.2.2",
     "@lingui/cli": "^3.13.3",
     "@lingui/core": "^3.13.3",
     "@lingui/macro": "^3.13.3",
