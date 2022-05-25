@@ -20,19 +20,32 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.0.1
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
       - name: Install Node
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
-          cache: 'npm'
+          cache: 'pnpm'
 
       - name: Install packages
-        run: npm ci
+        run: pnpm install --frozen-lockfile
+
+      - name: Install Cypress binary
+        run: pnpm cypress install
 
       - name: Run tests with dev server
         uses: cypress-io/github-action@v2
         with:
-          start: npm run dev
+          # we have already installed all dependencies above and cypress looks for package-lock.json
+          # see https://github.com/cypress-io/github-action/issues/145
+          install: false
+          start: pnpm dev
           wait-on: 'http://localhost:3001'
           wait-on-timeout: 120
         env:

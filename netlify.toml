@@ -1,9 +1,11 @@
 [build.environment]
 NODE_VERSION = "18"
+NPM_FLAGS    = "--version" # prevent Netlify npm install
 
 [build]
 publish = "dist"
-command = "npm run build"
+command = "npx pnpm i --store=node_modules/.pnpm-store --frozen-lockfile && npx pnpm build"
+
 
 [[redirects]]
 from   = "/*"
@@ -19,6 +21,6 @@ for = "/manifest.webmanifest"
 for = "/assets/*"
   [headers.values]
   cache-control = '''
-    max-age=31536000,
-    immutable
-    '''
+        max-age=31536000,
+        immutable
+        '''

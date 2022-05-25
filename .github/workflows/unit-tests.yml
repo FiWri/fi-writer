@@ -10,24 +10,29 @@ on:
     branches: [trunk]
 
 jobs:
-
   vitest:
     runs-on: ubuntu-latest
     name: Vitest
     timeout-minutes: 10
     steps:
-
       - name: Checkout
         uses: actions/checkout@v3
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2.0.1
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
 
       - name: Install Node
         uses: actions/setup-node@v3
         with:
           node-version: '18.x'
-          cache: 'npm'
+          cache: 'pnpm'
 
       - name: Install packages
-        run: npm ci
+        run: pnpm install --frozen-lockfile
 
       - name: Run unit tests
-        run: npm run vitest run
+        run: pnpm vitest run
