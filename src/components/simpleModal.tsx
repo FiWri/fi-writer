@@ -74,7 +74,6 @@ interface SimpleModalProps {
   title?: string;
   children?: ReactNode;
 }
-console.log(document.getElementById('portal'));
 const portalDiv: HTMLElement = document.getElementById('portal')!;
 
 export const SimpleModal = ({ children, title }: SimpleModalProps) => {
