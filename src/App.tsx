@@ -42,10 +42,6 @@ export const App = () => {
     <I18nProvider i18n={i18n}>
       <ThemeProvider theme={theme}>
         <ColorModeProvider>
-          <AppWrapper>
-            <Router />
-            <Toaster />
-          </AppWrapper>
           <ModalProvider>
             <AppWrapper>
               <Router />

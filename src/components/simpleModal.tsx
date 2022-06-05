@@ -1,7 +1,14 @@
 import { Trans } from '@lingui/macro';
+import {
+  Box,
+  BoxProps,
+  Button,
+  Flex,
+  Heading,
+  FlexProps,
+} from '@theme-ui/components';
 import { ReactNode } from 'react';
 import * as ReactDom from 'react-dom';
-import { Box, BoxProps, Button, Flex, Heading, FlexProps } from 'theme-ui';
 
 import { useSimpleModal } from '~/hooks';
 
@@ -67,6 +74,7 @@ interface SimpleModalProps {
   title?: string;
   children?: ReactNode;
 }
+console.log(document.getElementById('portal'));
 const portalDiv: HTMLElement = document.getElementById('portal')!;
 
 export const SimpleModal = ({ children, title }: SimpleModalProps) => {
