@@ -6,6 +6,7 @@ import { ThemeProvider } from '@theme-ui/core';
 import { de, en, fr } from 'make-plural/plurals';
 import { Toaster } from 'react-hot-toast';
 
+import { ModalProvider } from '~/contexts/modalContext';
 import { useTheme } from '~/hooks';
 import { deMessages, enMessages, FiwriLocales, frMessages } from '~/locales';
 import { Router } from '~/Router';
@@ -41,10 +42,11 @@ export const App = () => {
     <I18nProvider i18n={i18n}>
       <ThemeProvider theme={theme}>
         <ColorModeProvider>
-          <AppWrapper>
-            <Router />
-            <Toaster />
-          </AppWrapper>
+          <ModalProvider>
+            <AppWrapper>
+              <Router />
+            </AppWrapper>
+          </ModalProvider>
         </ColorModeProvider>
       </ThemeProvider>
     </I18nProvider>

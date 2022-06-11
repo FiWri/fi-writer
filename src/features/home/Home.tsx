@@ -4,6 +4,7 @@ import { Button, Flex, Heading, Image, Link, Text } from '@theme-ui/components';
 import { FaGithub } from 'react-icons/fa';
 import { Link as NavLink } from 'react-router-dom';
 
+import { useModalContext } from '~/contexts';
 import { useColor, useLocale, useTheme } from '~/hooks';
 import { routes } from '~/Router';
 
@@ -19,6 +20,7 @@ export const Home = () => {
   const { switchTheme } = useTheme();
   const { switchColorMode } = useColor();
   const { switchLocale } = useLocale();
+  const { openModal } = useModalContext();
 
   return (
     <Flex
@@ -41,7 +43,7 @@ export const Home = () => {
         }}
       />
       <Heading as="h1">
-        <Trans>FiWri</Trans>
+        <Trans id="app-name">FiWri</Trans>
       </Heading>
       <Text>
         <Trans id="home.app-description">
@@ -62,17 +64,20 @@ export const Home = () => {
       </Flex>
       <Flex className="test-buttons">
         <Button type="button" onClick={() => switchLocale()}>
-          <Trans>switch language</Trans>
+          <Trans id="home.switch-language">switch language</Trans>
         </Button>
         <Button type="button" onClick={() => switchTheme()}>
-          <Trans>switch theme</Trans>
+          <Trans id="home.switch-theme">switch theme</Trans>
         </Button>
         <Button
           variant="secondary"
           type="button"
           onClick={() => switchColorMode()}
         >
-          <Trans>switch color mode</Trans>
+          <Trans id="home.switch-mode">switch color mode</Trans>
+        </Button>
+        <Button type="button" onClick={() => openModal()}>
+          <Trans id="home.open-modal">open modal</Trans>
         </Button>
       </Flex>
       <Link

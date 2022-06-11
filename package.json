@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "scripts": {
-    "build": "pnpm clean && tsc && cross-env SOURCE_MAP=true SW=true RELOAD_SW=true vite build",
+    "build": "pnpm clean && tsc && cross-env SOURCE_MAP=true SW=true vite build",
     "clean": "del-cli dev-dist dist",
     "dev": "pnpm clean && cross-env SW_DEV=true vite",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
