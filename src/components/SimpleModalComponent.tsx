@@ -33,7 +33,7 @@ const Overlay = (props: FlexProps) => (
   </Flex>
 );
 
-const StyledModal = ({ isOpen, ...props }: StyledModalProps) => (
+const StyledModal = (props: StyledModalProps) => (
   <Box
     sx={{
       border: 'thick',

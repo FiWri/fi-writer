@@ -1,2 +1,2 @@
 export * from './NotFound';
-export * from './SimpleModal';
+export * from './SimpleModalComponent';
