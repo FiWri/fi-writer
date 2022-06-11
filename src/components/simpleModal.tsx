@@ -4,8 +4,8 @@ import {
   BoxProps,
   Button,
   Flex,
-  Heading,
   FlexProps,
+  Heading,
 } from '@theme-ui/components';
 import { ReactNode } from 'react';
 import * as ReactDom from 'react-dom';
@@ -74,11 +74,15 @@ interface SimpleModalProps {
   title?: string;
   children?: ReactNode;
 }
-const portalDiv: HTMLElement = document.getElementById('portal')!;
+const portalDiv: HTMLElement | null = document.getElementById('portal');
 
 export const SimpleModal = ({ children, title }: SimpleModalProps) => {
   const { isOpen, closeModal } = useSimpleModal();
-  console.log(isOpen);
+
+  if (!portalDiv) {
+    return <></>;
+  }
+
   if (isOpen) {
     return ReactDom.createPortal(
       <>
@@ -92,7 +96,7 @@ export const SimpleModal = ({ children, title }: SimpleModalProps) => {
           <Content>{children}</Content>
           <Flex sx={{ justifyContent: 'center', margin: '1em' }}>
             <Button onClick={closeModal}>
-              <Trans id="modal.close">Close</Trans>
+              <Trans id="simple-modal.close">Close</Trans>
             </Button>
           </Flex>
         </StyledModal>
@@ -100,5 +104,6 @@ export const SimpleModal = ({ children, title }: SimpleModalProps) => {
       portalDiv
     );
   }
+
   return <></>;
 };

@@ -17,25 +17,33 @@ msgstr ""
 msgid "404-not-found"
 msgstr ""
 
-#: src/features/home/Home.tsx:44
-msgid "FiWri"
+#: src/features/home/Home.tsx:46
+msgid "app-name"
 msgstr "FiWri"
 
-#: src/features/home/Home.tsx:47
+#: src/features/home/Home.tsx:49
 msgid "home.app-description"
 msgstr ""
 
-#: src/features/home/Home.tsx:75
-msgid "switch color mode"
-msgstr "Farbmodus wechseln"
+#: src/features/home/Home.tsx:80
+msgid "home.open-modal"
+msgstr "Offnen"
 
-#: src/features/home/Home.tsx:65
-msgid "switch language"
+#: src/features/home/Home.tsx:67
+msgid "home.switch-language"
 msgstr "Sprache wechseln"
 
-#: src/features/home/Home.tsx:68
-msgid "switch theme"
+#: src/features/home/Home.tsx:77
+msgid "home.switch-mode"
+msgstr "Farbmodus wechseln"
+
+#: src/features/home/Home.tsx:70
+msgid "home.switch-theme"
 msgstr "Wechselthema"
+
+#: src/components/SimpleModal.tsx:99
+msgid "simple-modal.close"
+msgstr "Schliessen"
 
 #: src/service-worker/components/OfflineReadyToast.tsx:12
 msgid "webworker.offline-toast.heading"

@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useContext } from 'react';
 
-import { SimpleModal } from '~/components/simpleModal';
+import { SimpleModal } from '~/components/SimpleModal';
 import { useSimpleModal } from '~/hooks';
 
 interface ModalProviderProps {
@@ -8,7 +8,9 @@ interface ModalProviderProps {
 }
 
 const ModalContext = createContext({
-  openModal: () => {return},
+  openModal: () => {
+    return;
+  },
 });
 
 export function useModalContext() {
@@ -21,7 +23,7 @@ export function ModalProvider(props: ModalProviderProps) {
   return (
     <ModalContext.Provider
       value={{
-        openModal
+        openModal,
       }}
     >
       <SimpleModal />

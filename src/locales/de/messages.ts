@@ -1,13 +1,14 @@
 /*eslint-disable*/ export const messages = {
   '404-not-found':
     "The page you're trying to reach does not exist. Sorry about that!",
-  FiWri: 'FiWri',
-  Github: 'Github',
+  'app-name': 'FiWri',
   'home.app-description':
     'A PWA made for planning and writing interactive fictions!',
-  'switch color mode': 'Farbmodus wechseln',
-  'switch language': 'Sprache wechseln',
-  'switch theme': 'Wechselthema',
+  'home.open-modal': 'Offnen',
+  'home.switch-language': 'Sprache wechseln',
+  'home.switch-mode': 'Farbmodus wechseln',
+  'home.switch-theme': 'Wechselthema',
+  'simple-modal.close': 'Schliessen',
   'webworker.offline-toast.heading': 'App ready to work offline',
   'webworker.refresh-toast.heading':
     'New content available, click on reload button to update.',

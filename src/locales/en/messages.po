@@ -17,25 +17,37 @@ msgstr ""
 msgid "404-not-found"
 msgstr "The page you're trying to reach does not exist. Sorry about that!"
 
-#: src/features/home/Home.tsx:44
-msgid "FiWri"
+#: src/features/home/Home.tsx:46
+msgid "app-name"
 msgstr "FiWri"
 
-#: src/features/home/Home.tsx:47
+#: src/features/home/Home.tsx:49
 msgid "home.app-description"
 msgstr "A PWA made for planning and writing interactive fictions!"
 
-#: src/features/home/Home.tsx:75
-msgid "switch color mode"
-msgstr "switch color mode"
+#: src/features/home/Home.tsx:77
+#~ msgid "home.color-mode"
+#~ msgstr "switch color mode"
 
-#: src/features/home/Home.tsx:65
-msgid "switch language"
+#: src/features/home/Home.tsx:80
+msgid "home.open-modal"
+msgstr "open modal"
+
+#: src/features/home/Home.tsx:67
+msgid "home.switch-language"
 msgstr "switch language"
 
-#: src/features/home/Home.tsx:68
-msgid "switch theme"
+#: src/features/home/Home.tsx:77
+msgid "home.switch-mode"
+msgstr "switch color mode"
+
+#: src/features/home/Home.tsx:70
+msgid "home.switch-theme"
 msgstr "switch theme"
+
+#: src/components/SimpleModal.tsx:99
+msgid "simple-modal.close"
+msgstr "Close"
 
 #: src/service-worker/components/OfflineReadyToast.tsx:12
 msgid "webworker.offline-toast.heading"
