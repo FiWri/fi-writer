@@ -1,6 +1,6 @@
 import { createContext, ReactNode, useContext } from 'react';
 
-import { SimpleModal } from '~/components/SimpleModal';
+import { SimpleModal } from '~/components';
 import { useSimpleModal } from '~/hooks';
 
 interface ModalProviderProps {
