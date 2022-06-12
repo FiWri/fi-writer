@@ -1,10 +1,12 @@
 /// <reference types="vitest" />
 import * as path from 'path';
 
+
 import replace from '@rollup/plugin-replace';
 import react from '@vitejs/plugin-react';
 import analyze from 'rollup-plugin-analyzer';
 import { defineConfig } from 'vite';
+import mkcert from 'vite-plugin-mkcert';
 import { ManifestOptions, VitePWA, VitePWAOptions } from 'vite-plugin-pwa';
 
 // By default, VitePWA will generate a service worker in dev mode using the `generateSW` strategy
@@ -95,9 +97,11 @@ export default defineConfig({
     jsxInject: `import { jsx } from '@theme-ui/core'`,
   },
   server: {
+    https: true,
     port: 3001,
   },
   plugins: [
+    mkcert(),
     react({
       babel: {
         // Use .babelrc config file
